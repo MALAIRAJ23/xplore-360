@@ -68,7 +68,7 @@ export default function DemoDialog({ isOpen, onClose = () => {} }) {
 
 Submitted from Xplore 360 Landing Page`;
 
-    const whatsappNumber = "919361223175";
+    const whatsappNumber = "916374305567";
 
     // Open WhatsApp in a new tab
     window.open(
