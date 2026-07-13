@@ -1,0 +1,638 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== BREAKPOINTS ===== */
+  --breakpoint-lg: 992px;
+
+  /* ===== COLORS ===== */
+  --color-primary: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #7c3aed;
+
+  --color-accent: #9333ea;
+  --color-accent-light: #c084fc;
+
+  /* Master background color — change THIS one value to update every section */
+  --color-page-bg: #F8F6FF;
+
+  --color-surface: #FFFFFF;
+  --color-neutral-border: #EDE9FE;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+
+  /* Status Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* ===== FONTS ===== */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Sora', 'Inter', sans-serif;
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 2px 8px rgba(139,92,246,0.06);
+  --shadow-md: 0 8px 24px rgba(139,92,246,0.10);
+  --shadow-lg: 0 20px 48px rgba(139,92,246,0.14);
+  --shadow-glow: 0 0 40px rgba(139,92,246,0.25);
+
+  /* ===== ANIMATIONS ===== */
+  --animate-text-sweep: textLightningSweep 3s linear infinite;
+
+  @keyframes textLightningSweep {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+}
+
+/* ===== BASE STYLES & OVERRIDES (RESET) ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-page-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Ambient fixed glows so every section shares the same light source */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 320px;
+    height: 320px;
+    background: rgba(139, 92, 246, 0.12);
+    filter: blur(90px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -10%;
+    right: -10%;
+    width: 320px;
+    height: 320px;
+    background: rgba(147, 51, 234, 0.10);
+    filter: blur(90px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  @media (min-width: 768px) {
+    body::before,
+    body::after {
+      width: 500px;
+      height: 500px;
+      filter: blur(130px);
+    }
+  }
+
+  #root {
+    isolation: isolate;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  }
+
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3.25rem; }
+  h3 { font-size: 2.5rem; }
+  h4 { font-size: 2rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.25rem; }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+  }
+}
+
+/* ===== COMPONENT SHORTCUT UTILITIES ===== */
+
+/* Glass Cards & Surfaces */
+@utility card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-neutral-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+
+  &:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+}
+
+/* Brand Logo Wrappers */
+@utility logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+@utility logo-mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+@utility logo-text {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+}
+
+/* ===== UTILITIES & CUSTOM GRAPHICS EFFECTS ===== */
+
+@utility text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-dark);
+}
+
+@utility bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+@utility flow-arrow {
+  stroke-dasharray: 6, 4;
+  animation: flow 1s linear infinite;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+/* Section divider — use instead of background-color changes to separate sections */
+@layer components {
+  .section-divider {
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
+    opacity: 0.35;
+  }
+}
+
+
+
+
+/* ==========================================================
+   Tailwind CSS Import
+   ========================================================== */
+/* @import "tailwindcss"; */
+
+
+/* ==========================================================
+   Theme Tokens
+   Central place for design system variables
+   ========================================================== */
+/* @theme { */
+
+  /* ----------------------------------------------------------
+     BREAKPOINTS
+     Custom responsive breakpoint
+     ---------------------------------------------------------- */
+  /* --breakpoint-lg: 992px; */
+
+  /* ----------------------------------------------------------
+     PRIMARY BRAND COLORS
+     ---------------------------------------------------------- */
+  /* --color-primary: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #7c3aed; */
+
+  /* ----------------------------------------------------------
+     ACCENT COLORS
+     ---------------------------------------------------------- */
+  /* --color-accent: #9333ea;
+  --color-accent-light: #c084fc; */
+
+  /* ----------------------------------------------------------
+     GLOBAL PAGE BACKGROUND
+     Change ONLY this value to update the site's
+     overall background color.
+     ---------------------------------------------------------- */
+  /* --color-page-bg: #E4DBF5; */
+
+  /* ----------------------------------------------------------
+     SURFACE COLORS
+     Used for cards, panels, containers, etc.
+     ---------------------------------------------------------- */
+  /* --color-surface: #FFFFFF;
+  --color-neutral-border: #EDE9FE; */
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY COLORS
+     ---------------------------------------------------------- */
+  /* --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8; */
+
+  /* ----------------------------------------------------------
+     STATUS COLORS
+     ---------------------------------------------------------- */
+  /* --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444; */
+
+  /* ----------------------------------------------------------
+     FONT FAMILIES
+     ---------------------------------------------------------- */
+  /* --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Sora', 'Inter', sans-serif;
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+     ---------------------------------------------------------- */
+  /* --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px; */
+
+  /* ----------------------------------------------------------
+     SHADOW SYSTEM
+     ---------------------------------------------------------- */
+  /* --shadow-sm: 0 2px 8px rgba(139,92,246,0.06);
+  --shadow-md: 0 8px 24px rgba(139,92,246,0.10);
+  --shadow-lg: 0 20px 48px rgba(139,92,246,0.14);
+  --shadow-glow: 0 0 40px rgba(139,92,246,0.25); */
+
+  /* ----------------------------------------------------------
+     CUSTOM ANIMATIONS
+     ---------------------------------------------------------- */
+  --animate-text-sweep: textLightningSweep 3s linear infinite;
+
+  /* Text shimmer animation */
+  /* @keyframes textLightningSweep {
+    0% {
+      background-position: 200% center;
+    }
+
+    100% {
+      background-position: -200% center;
+    }
+  }
+} */
+
+
+/* ==========================================================
+   BASE LAYER
+   Global reset + typography + body styles
+   ========================================================== */
+/* @layer base { */
+
+  /* Smooth scrolling + prevent font resizing on iOS */
+  /* html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  } */
+
+  /* ----------------------------------------------------------
+     Body
+     ---------------------------------------------------------- */
+  /* body {
+    min-height: 100vh;
+    background-color: var(--color-page-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative;
+  } */
+
+  /* ----------------------------------------------------------
+     Background Ambient Glow (Top Left)
+     Creates premium soft lighting
+     ---------------------------------------------------------- */
+  /* body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.12);
+    filter: blur(130px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  } */
+
+  /* ----------------------------------------------------------
+     Background Ambient Glow (Bottom Right)
+     ---------------------------------------------------------- */
+  /* body::after {
+    content: '';
+    position: fixed;
+    bottom: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(147, 51, 234, 0.10);
+    filter: blur(130px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  } */
+
+  /* Creates a new stacking context */
+  /* #root {
+    isolation: isolate;
+  } */
+
+  /* ----------------------------------------------------------
+     Headings
+     ---------------------------------------------------------- */
+  /* h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  } */
+
+  /* Heading Sizes */
+  /* h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.25rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+  }
+
+  /* Paragraph styling */
+  /* p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+  } */
+/* } */
+
+
+/* ==========================================================
+   REUSABLE UTILITIES
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Premium Card Utility
+   ---------------------------------------------------------- */
+/* @utility card { */
+
+  /* background-color: var(--color-surface);
+  border: 1px solid var(--color-neutral-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease; */
+
+  /* Hover Effect */
+  /* &:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+} */
+
+
+/* ----------------------------------------------------------
+   Logo Container
+   ---------------------------------------------------------- */
+/* @utility logo { */
+  /* display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+} */
+
+
+/* ----------------------------------------------------------
+   Logo Icon
+   ---------------------------------------------------------- */
+/* @utility logo-mark {
+
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-accent) 100%
+    );
+
+  font-size: 0.75rem;
+  color: #ffffff;
+} */
+
+
+/* ----------------------------------------------------------
+   Logo Text
+   ---------------------------------------------------------- */
+/* @utility logo-text {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+} */
+
+
+/* ==========================================================
+   GRAPHIC UTILITIES
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Gradient Text
+   ---------------------------------------------------------- */
+/* @utility text-gradient {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-accent) 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+} */
+
+
+/* ----------------------------------------------------------
+   Eyebrow Text
+   Small uppercase section labels
+   ---------------------------------------------------------- */
+/* @utility eyebrow {
+
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--color-primary-dark);
+} */
+
+
+/* ----------------------------------------------------------
+   Grain Texture Overlay
+   ---------------------------------------------------------- */
+/* @utility bg-grain {
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  background-size: 120px 120px;
+} */
+
+
+/* ----------------------------------------------------------
+   Animated SVG Flow Arrow
+   ---------------------------------------------------------- */
+/* @utility flow-arrow {
+
+  stroke-dasharray: 6, 4;
+
+  animation:
+    flow 1s linear infinite;
+} */
+
+
+/* Flow Animation */
+/* @keyframes flow {
+
+  to {
+    stroke-dashoffset: -20;
+  }
+
+} */
+
+
+/* ==========================================================
+   COMPONENTS
+   ========================================================== */
+
+/* @layer components { */
+
+  /* ----------------------------------------------------------
+     Section Divider
+     Creates subtle separation between sections
+     without changing background colors.
+     ---------------------------------------------------------- */
+  /* .section-divider {
+    position: relative;
+  } */
+
+  /* Decorative gradient line */
+  /* .section-divider::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 60%;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary-light),
+        transparent
+      );
+
+    opacity: 0.35;
+  }
+} */
