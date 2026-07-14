@@ -11,6 +11,7 @@ import Industries from './components/industries/Industries';
 import Implementation from './components/implementation/Implementation';
 import ProductTour from './components/productTour/ProductTour';
 import FeatureHighlights from './components/featureHighlights/FeatureHighlights';
+import DemoVideo from './components/demoVideo/DemoVideo'; // IMPORT IT HERE
 import Pricing from  './components/pricing/Pricing';
 import Transformation from './components/transformation/Transformation';
 import Testimonials from './components/testimonials/Testimonials';
@@ -64,6 +65,7 @@ function App() {
         <Modules />
         <Journey />
         <Industries />
+        <DemoVideo />
         <Implementation />
         <ProductTour />
         <FeatureHighlights />
