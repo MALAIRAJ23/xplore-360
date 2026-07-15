@@ -19,6 +19,12 @@ import {
   ArrowUpRight,
   CheckCircle2,
 } from 'lucide-react';
+import admissionsImg from '../../assets/modules/admission-management.webp';
+import studentImg from '../../assets/modules/student-management.webp';
+import feeImg from '../../assets/modules/fee-management.webp';
+import attendanceImg from '../../assets/modules/attendance-management.webp';
+import staffImg from '../../assets/modules/staff-management.webp';
+import reportsImg from '../../assets/modules/reports-management.webp';
 
 const modules = [
   {
@@ -28,7 +34,7 @@ const modules = [
     title: 'Admissions CRM',
     description: 'Streamline your entire admission process — from lead capture to enrollment. Track, nurture, and convert more leads efficiently.',
     features: ['Lead Management', 'Follow-up Tracking', 'Enquiry Management'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop', 
+    image: admissionsImg,
     accent: '#635BFF'
   },
   {
@@ -38,7 +44,7 @@ const modules = [
     title: 'Student Management',
     description: 'Maintain complete student records in one place — profiles, academics, and documents, all organized and easy to access.',
     features: ['Student Profiles', 'Document Management', 'Batch Allocation'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop', 
+    image: studentImg,
     accent: '#059669'
   },
   {
@@ -48,7 +54,7 @@ const modules = [
     title: 'Fee Management',
     description: 'Automate fee collection, invoicing, and reminders. Get a clear view of dues, payments, and outstanding balances.',
     features: ['Online Payments', 'Due Reminders', 'Receipt Generation'],
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop', 
+    image: feeImg,
     accent: '#EA580C'
   },
   {
@@ -58,7 +64,7 @@ const modules = [
     title: 'Attendance',
     description: 'Track daily attendance with ease — biometric, manual, or app-based check-ins with real-time reports for staff and students.',
     features: ['Biometric Sync', 'Leave Requests', 'Automated Alerts'],
-    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop',
+    image: attendanceImg,
     accent: '#9333EA'
   },
   {
@@ -68,7 +74,7 @@ const modules = [
     title: 'Staff Management',
     description: 'Manage staff records, roles, and performance — from onboarding to payroll — in a single unified module.',
     features: ['Role-based Access', 'Payroll Integration', 'Performance Tracking'],
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop',
+    image: staffImg,
     accent: '#D97706'
   },
   {
@@ -78,12 +84,14 @@ const modules = [
     title: 'Reports',
     description: 'Get actionable insights with ready-made and custom reports across admissions, fees, attendance, and more.',
     features: ['Custom Dashboards', 'Export to Excel/PDF', 'Trend Analysis'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+    image: reportsImg,
     accent: '#4F46E5'
   },
 ];
 
 const getOptimizedImageUrl = (url, isDesktop) => {
+  // Local imported images (from webpack/vite) won't have query params to replace — return as-is.
+  if (!url.startsWith('http')) return url;
   const targetWidth = isDesktop ? 960 : 640; 
   return url.replace(/([?&])w=\d+/, `$1w=${targetWidth}`).replace(/([?&])q=\d+/, '$1q=65');
 };
@@ -227,15 +235,20 @@ const StackedCard = ({ mod, index, progress, total }) => {
               }}
               className="w-full max-w-[250px] sm:max-w-[360px] md:max-w-[480px] relative"
             >
-              <div className="bg-[#1e1e1e] rounded-t-xl md:rounded-t-3xl pb-2 md:pb-3 pt-2 md:pt-3 px-2 md:px-3 shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_10px_20px_rgba(0,0,0,0.2)] md:shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.3)] relative transition-transform duration-500 group-hover:scale-[1.02]">
-                <div className="absolute top-[4px] md:top-[8px] left-1/2 -translate-x-1/2 w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#444]" />
-                <div className="bg-black rounded-[4px] md:rounded-lg overflow-hidden aspect-[16/10] relative">
+              {/* FIX 1: pt-2.5 (was pt-2) — gives the mobile bezel enough breathing room so the screen doesn't look "clipped" right at the top edge */}
+              <div className="bg-[#1e1e1e] rounded-t-xl md:rounded-t-3xl pb-2 md:pb-3 pt-2.5 md:pt-3 px-2 md:px-3 shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_10px_20px_rgba(0,0,0,0.2)] md:shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.3)] relative transition-transform duration-500 group-hover:scale-[1.02]">
+                
+                {/* FIX 2: top-[6px] (was top-[4px]) — moves the camera notch dot fully into the bezel instead of crowding the screen's top edge on small screens */}
+                <div className="absolute top-[6px] md:top-[8px] left-1/2 -translate-x-1/2 w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#444]" />
+                
+                {/* FIX 3: rounded-[6px] (was rounded-[4px]) — inner screen radius now nests cleanly inside the outer rounded-t-xl bezel corner, so corners don't look cut off */}
+                <div className="bg-black rounded-[6px] md:rounded-lg overflow-hidden aspect-[16/10] relative flex items-center justify-center">
                   <img 
                     src={getOptimizedImageUrl(mod.image, isDesktop)} 
                     alt={mod.title} 
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover object-top block border border-white/10"
+                    className="w-full h-full object-contain object-center block"
                   />
                 </div>
               </div>
@@ -261,14 +274,12 @@ export default function Modules() {
   });
 
   return (
-    // FIX: Reduced main section padding from 'py-20 md:py-32' to 'py-10 md:py-16'
     <section id="modules" className="relative w-full bg-page-bg py-10 md:py-16">        
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        // FIX: Reduced margin-bottom below header
         className="relative z-10 max-w-2xl mx-auto text-center mb-6 md:mb-12 px-5"
       >
         <span className="inline-flex items-center gap-1.5 text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#635BFF] bg-white border border-[#635BFF]/20 shadow-sm px-4 py-1.5 rounded-full mb-4 md:mb-6">
@@ -289,7 +300,6 @@ export default function Modules() {
         ref={containerRef} 
         className="relative w-full max-w-[1200px] mx-auto px-5 sm:px-8"
       >
-        {/* FIX: Reduced bottom padding significantly from pb-[20vh] to pb-6 */}
         <div className="flex flex-col gap-[8vh] sm:gap-[12vh] md:gap-[18vh] pb-6">
           {modules.map((mod, index) => (
             <StackedCard 

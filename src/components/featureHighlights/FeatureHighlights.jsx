@@ -11,13 +11,20 @@ import {
   Building2 
 } from 'lucide-react';
 
+import onlineadmissionImg from '../../assets/feature-highlights/online-admission.webp';
+import parentaccessImg from '../../assets/feature-highlights/parent-mobile.webp';
+import feeremindersImg from '../../assets/feature-highlights/fee-remainders.webp';
+import whatsappintegrationImg from '../../assets/feature-highlights/whats-app.webp';
+import rolebasedaccessImg from '../../assets/feature-highlights/role-based-access.webp';
+import multibranchmanagementImg from '../../assets/feature-highlights/multi-branch.webp';
+
 const FEATURES = [
   {
     id: 1,
     title: 'Online Admission Portal',
     desc: 'Students apply online with custom forms, document uploads, and automatic shortlisting. Reduce front-desk load by 70%.',
     icon: Globe,
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1000&auto=format&fit=crop',
+    image: onlineadmissionImg,
     accent: '#635BFF'
   },
   {
@@ -25,7 +32,7 @@ const FEATURES = [
     title: 'Parent Mobile Access',
     desc: 'Parents track attendance, fees, exam results, and announcements in real time from a dedicated mobile app.',
     icon: Smartphone,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop',
+    image: parentaccessImg,
     accent: '#059669'
   },
   {
@@ -33,7 +40,7 @@ const FEATURES = [
     title: 'Automated Fee Reminders',
     desc: 'Schedule SMS, email, and WhatsApp reminders. Cut overdue collections in half — without lifting a finger.',
     icon: BellRing,
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000&auto=format&fit=crop',
+    image: feeremindersImg,
     accent: '#EA580C'
   },
   {
@@ -41,7 +48,7 @@ const FEATURES = [
     title: 'WhatsApp Integration',
     desc: 'Send instant updates, fee receipts, and announcements directly via WhatsApp Business API.',
     icon: MessageSquare,
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
+    image: whatsappintegrationImg,
     accent: '#9333EA'
   },
   {
@@ -49,7 +56,7 @@ const FEATURES = [
     title: 'Role-Based Access',
     desc: 'Fine-grained permissions for Admin, Principal, Faculty, Accountant — everyone sees only what they need.',
     icon: ShieldCheck,
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop',
+    image: rolebasedaccessImg,
     accent: '#E11D48'
   },
   {
@@ -57,7 +64,7 @@ const FEATURES = [
     title: 'Multi-Branch Management',
     desc: 'Operate every campus from one dashboard. Centralized data, decentralized control.',
     icon: Building2,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
+    image: multibranchmanagementImg,
     accent: '#D97706'
   }
 ];

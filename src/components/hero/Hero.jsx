@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 import logo from '../../assets/logo.png';
 
-import imgMobile1 from '../../assets/hero/mobile-image-1.png';
-import imgMobile2 from '../../assets/hero/mobile-image-2.png';
-import imgMobile3 from '../../assets/hero/mobile-image-3.png';
-import imgMobile4 from '../../assets/hero/mobile-image-4.png';
-import imgMobile5 from '../../assets/hero/mobile-image-5.png';
-import imgMobile6 from '../../assets/hero/mobile-image-6.png';
-import imgMobile7 from '../../assets/hero/mobile-image-7.png';
+import imgMobile1 from '../../assets/hero/mobile-image-1.webp';
+import imgMobile2 from '../../assets/hero/mobile-image-2.webp';
+import imgMobile3 from '../../assets/hero/mobile-image-3.webp';
+import imgMobile4 from '../../assets/hero/mobile-image-4.webp';
+import imgMobile5 from '../../assets/hero/mobile-image-5.webp';
+import imgMobile6 from '../../assets/hero/mobile-image-6.webp';
+import imgMobile7 from '../../assets/hero/mobile-image-7.webp';
 import DemoDialog from '../demo/DemoDialog';
 
 const AnimatedNumber = ({ end, suffix = '', start = false }) => {
