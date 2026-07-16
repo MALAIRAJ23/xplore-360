@@ -5,16 +5,16 @@ import DemoDialog from '../demo/DemoDialog';
 
 const OLD_WAY = [
   'Messy Manual Registers',
-  'Fee Tracking & Reconciliation Errors',
+  'Fee Tracking & follow-up issues',
   'Delayed, Inaccurate Reports',
   'Slow Paper-Based Admissions',
 ];
 
 const MODERN_WAY = [
-  '100% Digital Cloud Records',
+  '100% Digital Records',
   'Automated Reminders & Collection',
   'Real-Time Live Analytics',
-  'Instant Online Admission Portals',
+  'Instant Online Admission',
 ];
 
 // --- LUXURY ANIMATION VARIANTS ---

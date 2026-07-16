@@ -4,34 +4,39 @@ import { Sparkles, ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'Is the software cloud-based?',
+    question: 'Is Xplore 360 suitable for all types of educational institutions?',
     answer:
-      'Yes — Xplore 360 is 100% cloud-based and accessible from any browser or device. No installation or local servers required.',
+      'Yes. Xplore 360 is a custom CRM software designed for schools, colleges, coaching centres, universities, and training institutes of all sizes.',
   },
   {
-    question: 'Can I manage multiple branches?',
+    question: 'Can we manage admissions digitally?',
     answer:
-      'Absolutely. Xplore 360 supports multi-branch management from a single dashboard, with branch-wise data, reports, and isolated permissions.',
+      'Yes. Our cloud-based software helps institutions manage enquiries, applications, document verification, approvals, and admissions through one centralized platform.',
   },
   {
-    question: 'Is a mobile app available?',
+    question: 'Does the platform support online fee collection?',
     answer:
-      'Yes, Xplore 360 offers dedicated iOS and Android mobile apps for staff, students, and parents to stay connected on the go.',
+      'Yes. Xplore 360 enables secure online payments, automated reminders, receipt generation, and real-time fee tracking through an integrated CRM and ERP system.',
   },
   {
-    question: 'Can fees be collected online?',
+    question: 'Can attendance be tracked digitally?',
     answer:
-      'Yes. Xplore 360 integrates seamlessly with major payment gateways so fees can be collected online with automatic receipts, reconciliation, and overdue reminders.',
+      'Yes. The platform supports digital attendance management with biometric integrations, real-time reporting, and instant notifications for administrators and parents.',
   },
   {
-    question: 'How long is the implementation process?',
+    question: "Is our institution's data secure?",
     answer:
-      'Most institutes are fully onboarded and live within 1–2 weeks. This includes historical data migration, system setup, and comprehensive staff orientation.',
+      'Yes. As one of the best CRM software solutions in India for educational institutions, Xplore 360 provides role-based access controls, secure cloud infrastructure, and regular data backups to ensure complete data protection.',
   },
   {
-    question: 'Is training provided for our staff?',
+    question: 'Why choose Xplore 360 over other CRM softwares?',
     answer:
-      'Yes, every plan includes free onboarding training sessions along with ongoing access to video guides, weekly webinars, and 24/7 premium support.',
+      'Xplore 360 combines admissions, student management, fee collection, attendance, communication, and analytics into one unified platform, making it one of the best CRM software solutions for educational institutions.',
+  },
+  {
+    question: 'Can Xplore 360 be customized for our institution\'s needs?',
+    answer:
+      'Yes. Our CRM software development team can customize workflows, modules, permissions, and reports based on your institution\'s specific requirements.',
   },
 ];
 

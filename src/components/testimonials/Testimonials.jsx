@@ -5,31 +5,31 @@ import { Quote, Star, Plus, Sparkles, ArrowRight, ArrowLeft } from 'lucide-react
 const TESTIMONIALS = [
   {
     id: 1,
-    quote: "In this ever-evolving digital era, understand the significance of staying ahead. Through our platform, explore the dynamic world of IT with us, decoding the algorithms to unraveling success.",
-    name: 'Matthew Lansberry',
-    role: 'CEO & Founder',
+    quote: "Xplore 360 has given us better control over our institution's operations. We now have complete visibility into student management through a single platform, enabling us to streamline processes and make better administrative decisions.",
+    name: 'Dr. Ramesh Kumar',
+    role: 'Principal',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    // image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop',
+    // avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     id: 2,
-    quote: "Working with Xplore 360 completely transformed how we approach our institute's administration. The clarity and support we received made all the difference in our growth journey.",
-    name: 'Sarah Collins',
-    role: 'Director of Admissions',
+    quote:"Xplore 360 is simple and easy to use. The automation features have helped our team save valuable time, streamline academic operations, and improve communication with both students and parents.",
+    name: 'Priya Nair',
+    role: 'Academic Coordinator',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&fit=crop',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    // image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&fit=crop',
+    // avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
-  {
-    id: 3,
-    quote: "The seamless integration of fee collection, attendance, and parent communication into one dashboard has saved our faculty hundreds of hours every single month. Pure magic.",
-    name: 'David Chen',
-    role: 'Principal',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop',
-    avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-  }
+  // {
+  //   id: 3,
+  //   quote: "The seamless integration of fee collection, attendance, and parent communication into one dashboard has saved our faculty hundreds of hours every single month. Pure magic.",
+  //   name: 'David Chen',
+  //   role: 'Principal',
+  //   rating: 5,
+  //   image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop',
+  //   avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
+  // }
 ];
 
 const TRUSTED_CLIENTS = [
@@ -118,8 +118,11 @@ export default function Testimonials() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[2.8rem] font-extrabold text-slate-900 leading-[1.2] tracking-tight">
-            What Institute Leaders Say <br className="hidden sm:block" />
+            Trusted by Educational Institutions <br className="hidden sm:block" />
           </h2>
+           <p className="text-slate-500 text-base sm:text-lg max-w-[600px] mx-auto leading-relaxed">
+    See how schools, colleges, and training institutes are simplifying daily operations with Xplore 360.
+  </p>
         </motion.div>
 
         {/* --- CONTENT GRID --- */}

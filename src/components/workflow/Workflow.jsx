@@ -23,7 +23,7 @@ const WORKFLOW_STEPS = [
     side: 'left', tilt: -6, mockupIcon: BellRing, mockupTitle: 'New Lead', mockupColor: '#fef3c7', mockupIconColor: '#d97706'
   },
   { 
-    id: 2, num: '02', title: 'Follow-Up', desc: 'Stay connected and nurture every lead.', icon: PhoneCall,
+    id: 2, num: '02', title: 'Follow-Up', desc: 'Custom CRM automation.', icon: PhoneCall,
     side: 'right', tilt: 4, mockupIcon: BarChart3, mockupTitle: 'Call Logged', mockupColor: '#e0e7ff', mockupIconColor: '#4f46e5'
   },
   { 
@@ -31,7 +31,7 @@ const WORKFLOW_STEPS = [
     side: 'right', tilt: -5, mockupIcon: FileSignature, mockupTitle: 'Form Approved', mockupColor: '#dcfce7', mockupIconColor: '#16a34a'
   },
   { 
-    id: 4, num: '04', title: 'Enrollment', desc: 'Onboard students effortlessly.', icon: UserPlus,
+    id: 4, num: '04', title: 'Student Onboarding', desc: 'Onboard students effortlessly.', icon: UserPlus,
     side: 'left', tilt: 5, mockupIcon: UserCheck, mockupTitle: 'ID Generated', mockupColor: '#f3e8ff', mockupIconColor: '#9333ea'
   },
   { 
@@ -39,7 +39,7 @@ const WORKFLOW_STEPS = [
     side: 'left', tilt: -6, mockupIcon: CreditCard, mockupTitle: 'Payment Success', mockupColor: '#dbeafe', mockupIconColor: '#2563eb'
   },
   { 
-    id: 6, num: '06', title: 'Attendance', desc: 'Track attendance in real-time.', icon: CalendarCheck,
+    id: 6, num: '06', title: 'Attendance', desc: 'Real-time attendance tracking.', icon: CalendarCheck,
     side: 'right', tilt: -4, mockupIcon: CheckCircle2, mockupTitle: 'Present Today', mockupColor: '#ecfccb', mockupIconColor: '#65a30d'
   },
   { 
@@ -47,7 +47,7 @@ const WORKFLOW_STEPS = [
     side: 'right', tilt: 4, mockupIcon: MessageCircle, mockupTitle: 'Message Sent', mockupColor: '#e0f2fe', mockupIconColor: '#0284c7'
   },
   { 
-    id: 8, num: '08', title: 'Reports', desc: 'Get actionable insights & analytics.', icon: BarChart3,
+    id: 8, num: '08', title: 'Reports', desc: 'Real-time attendance tracking.', icon: BarChart3,
     side: 'left', tilt: -5, mockupIcon: BarChart3, mockupTitle: 'Report Ready', mockupColor: '#f3e8ff', mockupIconColor: '#9333ea'
   }
 ];
@@ -152,14 +152,28 @@ export default function Workflow() {
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6">
         
         <div className="relative z-20 max-w-[640px] text-center mx-auto mb-6 sm:mb-8 lg:mb-12">
-          <h2 className="text-[clamp(1.5rem,3.5vw,2.4rem)] font-extrabold text-slate-900 leading-[1.25] mb-3">
-            From <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Enquiry</span> to Insights
-          </h2>
-          <p className="text-[clamp(0.88rem,1.5vw,1rem)] text-slate-500 leading-relaxed px-2">
-            Every step of the student journey, beautifully connected.
-          </p>
-        </div>
+  {/* NEW: "How It Works" Label */}
+  <motion.div 
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-violet-50 border border-violet-100"
+  >
+    <span className="w-2 h-2 rounded-full bg-violet-600 animate-pulse" />
+    <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-violet-700">
+      How It Works
+    </span>
+  </motion.div>
 
+  {/* Existing Heading */}
+  <h2 className="text-[clamp(1.5rem,3.5vw,2.4rem)] font-extrabold text-slate-900 leading-[1.25] mb-3">
+    From <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Enquiry</span> to Insights
+  </h2>
+  
+  <p className="text-[clamp(0.88rem,1.5vw,1rem)] text-slate-500 leading-relaxed px-2">
+    Every step of the student journey, beautifully connected.
+  </p>
+</div>
         <div className="relative w-full max-w-[850px] xl:max-w-[980px] mx-auto py-5">
           
           {/* DESKTOP/TABLET S-CURVE */}

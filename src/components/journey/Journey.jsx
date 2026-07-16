@@ -13,14 +13,14 @@ const STEPS = [
   {
     id: 1,
     title: 'Lead Enquiry',
-    desc: 'Auto-captured into CRM with intelligent source tracking.',
+    desc: 'Capture student enquiries through a cloud-based CRM platform.',
     tag: 'Lead Capture',
     icon: Sparkles,
     color: '#f59e0b', 
     bg: '#fef3c7',
     details: [
-      'Real-time automated tracking of UTM referral parameters and campaign sources.',
-      'Instant intelligent lead routing and assignment based on active counsellor loads.'
+      'Auto-capture leads from websites, campaigns, WhatsApp, and referral sources.',
+      'Intelligent lead assignment and enquiry tracking through custom CRM workflows.'
     ]
   },
   {
@@ -32,8 +32,8 @@ const STEPS = [
     color: '#3b82f6', 
     bg: '#dbeafe',
     details: [
-      'Pre-scheduled WhatsApp nurture templates triggered instantly upon student enquiry.',
-      'Automated reminder notifications to eliminate task leaks and missed callbacks.'
+      'Pre-built WhatsApp and email nurturing sequences for admissions.',
+      'Automated reminders to eliminate missed follow-ups and improve conversions.'
     ]
   },
   {
@@ -45,8 +45,8 @@ const STEPS = [
     color: '#10b981', 
     bg: '#d1fae5',
     details: [
-      'OCR-driven extraction and authenticity match verification on uploaded certificates.',
-      'Smooth registration document collection with modern digital enrollment triggers.'
+      'Secure document verification and approval automation.',
+      'One-click admission processing with centralized student records.'
     ]
   },
   {
@@ -58,8 +58,8 @@ const STEPS = [
     color: '#8b5cf6', 
     bg: '#ede9fe',
     details: [
-      'Deep checkout support supporting key debit/credit gateways and instant UPI transfers.',
-      'Real-time automated receipt generation mapped cleanly back to student ledgers.'
+      'Online payment gateway integrations with instant receipt generation.',
+      ' Automated reminders and real-time fee reconciliation.'
     ]
   },
   {
@@ -71,21 +71,21 @@ const STEPS = [
     color: '#ec4899', 
     bg: '#fce7f3',
     details: [
-      'Direct, lag-free RFID log sync recording active classroom or campus entry metrics.',
-      'Immediate automated parent notification broadcasts for real-time check-in updates.'
+      'Biometric and digital attendance synchronization.',
+      'Instant parent notifications and attendance reporting.'
     ]
   },
   {
     id: 6,
     title: 'Reports & Analytics',
-    desc: 'Live intuitive dashboards for every single stakeholder.',
+    desc: 'Live intuitive dashboards for every single Institutions.',
     tag: 'INSIGHTS',
     icon: BarChart3,
     color: '#06b6d4', 
     bg: '#cffafe',
     details: [
-      'Live graphical breakdowns showing registrar yield ratios and ledger cash flows.',
-      'Automated scheduled report dispatches configured to hit management inboxes.'
+      'Real-time dashboards for admissions, fees, and institutional performance.',
+      'Automated reports for management and decision-making.'
     ]
   },
 ];
@@ -149,15 +149,12 @@ export default function Journey() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase text-[#635BFF] bg-white border border-[#635BFF]/20 shadow-sm px-4 py-1.5 rounded-full mb-5">
-            The Flow
-          </span>
+          
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.8rem] font-extrabold text-slate-900 leading-[1.3] mb-4 tracking-tight py-1">
-            From <span className="bg-gradient-to-r from-[#8A85FF] to-[#635BFF] bg-clip-text text-transparent italic pb-2 inline-block">Enquiry</span> to Insights
+            From <span className="bg-gradient-to-r from-[#8A85FF] to-[#635BFF] bg-clip-text text-transparent italic pb-2 inline-block">Admissions</span> to Excellence
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-slate-500 leading-relaxed font-medium m-0 px-2">
-            One unified platform that choreographs every student journey — from the first parent enquiry to final enrollment, fees, and outcomes.
-          </p>
+One unified platform that manages every student journey from parent enquiry to final enrollment, fees and results.          </p>
         </motion.div>
 
         {/* MAIN LAYOUT GATEWAYS */}

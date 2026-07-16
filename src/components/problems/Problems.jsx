@@ -19,7 +19,7 @@ const CAROUSEL_DATA = [
     OpenIcon: MailOpen,
     SmallIcon: MessageSquare,
     title: 'COMMUNICATION GAP',
-    desc: 'Parents unaware of progress, resulting in endless calls.',
+    desc: 'Missed updates and confusion.',
     solution: 'Automated Notifications'
   },
   {
@@ -29,7 +29,7 @@ const CAROUSEL_DATA = [
     SmallIcon: CalendarCheck,
     title: 'ATTENDANCE TRACKING',
     desc: 'Manual registers, errors, and missing records.',
-    solution: 'Biometric & App Attendance'
+    solution: 'Real-Time Attendance'
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const CAROUSEL_DATA = [
     OpenIcon: FolderOpen,
     SmallIcon: FileText,
     title: 'MANUAL ADMISSION',
-    desc: 'Paper forms, lost data, slow processing.',
+    desc: 'Paper forms, lost data and slow processing.',
     solution: 'Online Admission Portal'
   },
   {
@@ -46,16 +46,16 @@ const CAROUSEL_DATA = [
     OpenIcon: CreditCard,
     SmallIcon: Wallet,
     title: 'FEE COLLECTION DELAYS',
-    desc: 'Endless follow-ups and reconciliation pain.',
-    solution: 'Auto Reminders & Gateways'
+    desc: 'Missed payments and follow-ups.',
+    solution: 'Automated Fee Collection'
   },
   {
     id: 5,
     ClosedIcon: Book,
     OpenIcon: BookOpen,
     SmallIcon: Database,
-    title: 'SCATTERED DATA',
-    desc: 'Data spread across Excel sheets and registers.',
+    title: 'UNEVEN DATA',
+    desc: 'Data spread across excel sheets and registers.',
     solution: 'Centralized Cloud CRM'
   }
 ];

@@ -32,8 +32,8 @@ const modules = [
     label: 'Admissions CRM',
     Icon: Users,
     title: 'Admissions CRM',
-    description: 'Streamline your entire admission process — from lead capture to enrollment. Track, nurture, and convert more leads efficiently.',
-    features: ['Lead Management', 'Follow-up Tracking', 'Enquiry Management'],
+    description: 'Capture, manage, and convert student enquiries with a streamlined admission workflow.',
+    features: ['Lead Management', 'Follow-up Tracking', ' Admission Pipeline'],
     image: admissionsImg,
     accent: '#635BFF'
   },
@@ -42,8 +42,8 @@ const modules = [
     label: 'Student Management',
     Icon: GraduationCap,
     title: 'Student Management',
-    description: 'Maintain complete student records in one place — profiles, academics, and documents, all organized and easy to access.',
-    features: ['Student Profiles', 'Document Management', 'Batch Allocation'],
+    description: 'Maintain complete student records, academic details, and documents from one place.',
+    features: ['Student Profiles', 'Document Storage', 'Batch Allocation'],
     image: studentImg,
     accent: '#059669'
   },
@@ -52,7 +52,7 @@ const modules = [
     label: 'Fee Management',
     Icon: Wallet,
     title: 'Fee Management',
-    description: 'Automate fee collection, invoicing, and reminders. Get a clear view of dues, payments, and outstanding balances.',
+    description: 'Simplify fee collection with automated reminders, online payments, and receipts.',
     features: ['Online Payments', 'Due Reminders', 'Receipt Generation'],
     image: feeImg,
     accent: '#EA580C'
@@ -62,8 +62,8 @@ const modules = [
     label: 'Attendance',
     Icon: CalendarCheck,
     title: 'Attendance',
-    description: 'Track daily attendance with ease — biometric, manual, or app-based check-ins with real-time reports for staff and students.',
-    features: ['Biometric Sync', 'Leave Requests', 'Automated Alerts'],
+    description: 'Monitor attendance accurately through digital tracking and real-time reporting.',
+    features: ['Student Attendance', 'Staff Attendance', 'Attendance Reports'],
     image: attendanceImg,
     accent: '#9333EA'
   },
@@ -72,8 +72,8 @@ const modules = [
     label: 'Staff Management',
     Icon: Briefcase,
     title: 'Staff Management',
-    description: 'Manage staff records, roles, and performance — from onboarding to payroll — in a single unified module.',
-    features: ['Role-based Access', 'Payroll Integration', 'Performance Tracking'],
+    description: 'Manage employee records, responsibilities, attendance, and performance efficiently.',
+    features: ['Staff Profiles', 'Leave Management', 'Role Permissions'],
     image: staffImg,
     accent: '#D97706'
   },
@@ -82,8 +82,8 @@ const modules = [
     label: 'Reports',
     Icon: BarChart3,
     title: 'Reports',
-    description: 'Get actionable insights with ready-made and custom reports across admissions, fees, attendance, and more.',
-    features: ['Custom Dashboards', 'Export to Excel/PDF', 'Trend Analysis'],
+    description: 'Generate actionable reports with real-time insights for smarter institutional decisions.',
+    features: ['Custom Reports', 'Performance Insights', 'Data Export'],
     image: reportsImg,
     accent: '#4F46E5'
   },

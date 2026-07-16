@@ -12,6 +12,8 @@ import imgMobile5 from '../../assets/hero/mobile-image-5.webp';
 import imgMobile6 from '../../assets/hero/mobile-image-6.webp';
 import imgMobile7 from '../../assets/hero/mobile-image-7.webp';
 import DemoDialog from '../demo/DemoDialog';
+import Button from '../ui/Button'; // Adjust path based on your folder structure
+
 
 const AnimatedNumber = ({ end, suffix = '', start = false }) => {
   const [value, setValue] = useState(0);
@@ -47,10 +49,9 @@ const DEVICE_IMAGES = [
 ];
 
 const STATS_DATA = [
-  { end: 100, suffix: '+', label: 'Institutes' },
-  { end: 50000, suffix: '+', label: 'Students' },
-  { end: 10, suffix: '+ Yrs', label: 'Experience' },
-  { end: 95, suffix: '%', label: 'Retention' },
+  { end: 100, suffix: '+', label: 'Institutes Trust Us' },
+  { end: 50000, suffix: '+', label: 'Students Managed' },
+  { end: 10, suffix: '+ Yrs', label: 'Years Industry Experience' },
 ];
 
 // Animation variants for staggered text reveal
@@ -135,22 +136,33 @@ const Hero = () => {
 
           {/* UPDATED CONTENT MATCHING YOUR IMAGE */}
           <motion.h1 variants={itemVariants} className="text-slate-900 font-extrabold tracking-tight leading-[1.1] mb-6 text-[2.2rem] sm:text-4xl md:text-5xl lg:text-[3.6rem]">
-            Complete <span className="text-[#635BFF]">Institute Management CRM</span> for Schools, Colleges &amp; Training Centers
+            Complete <span className="text-[#635BFF]">Institute Management</span> & CRM Software
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-slate-500 leading-relaxed text-base md:text-[1.1rem] max-w-[540px] mb-8 mx-auto lg:mx-0">
             Manage Admissions, Students, Fees, Attendance, Staff, Exams, and Communication from a single, beautifully designed platform.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-12">
-            <button
-              onClick={() => setIsDemoOpen(true)}
-              className="w-full sm:w-auto px-8 py-3.5 bg-[#635BFF] hover:bg-[#4A44D4] text-white rounded-xl font-semibold shadow-[0_10px_20px_rgba(99,91,255,0.25)] hover:shadow-[0_15px_25px_rgba(99,91,255,0.35)] transition-all flex items-center justify-center gap-2 group"
-            >
-              Book Free Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-          
-          </motion.div>
+         <motion.div 
+  variants={itemVariants} 
+  className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-12"
+>
+  <Button 
+    variant="primary" 
+    size="lg" 
+    onClick={() => setIsDemoOpen(true)}
+  >
+    Book Free Demo <ArrowRight size={18} />
+  </Button>
+  
+  <Button 
+    variant="outline" 
+    size="lg" 
+    onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+  >
+    Explore Features
+  </Button>
+</motion.div>
 
           {/* Stats Grid */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 w-full pt-8 border-t border-slate-200/60 gap-6">
