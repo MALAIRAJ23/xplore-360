@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
@@ -84,6 +85,7 @@ function App() {
         isOpen={isDemoOpen} 
         onClose={() => setIsDemoOpen(false)} 
       />
+      <Analytics />
     </>
   );
 }
