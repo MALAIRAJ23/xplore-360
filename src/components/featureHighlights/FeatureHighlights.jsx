@@ -22,57 +22,57 @@ const FEATURES = [
   {
     id: 1,
     title: 'Online Admission Portal',
-    desc: 'Students apply online with custom forms, document uploads, and automatic shortlisting. Reduce front-desk load by 70%.',
+    desc: 'Digitize admissions and reduce front-desk workload by up to 70% with automated application processing.',
     icon: Globe,
     image: onlineadmissionImg,
-    accent: '#635BFF'
+    accent: '#635BFF',
+    bullets: ['Setup in Minutes', 'Works on Any Device', 'Premium Support Included']
   },
   {
     id: 2,
-    title: 'Parent Mobile Access',
-    desc: 'Parents track attendance, fees, exam results, and announcements in real time from a dedicated mobile app.',
+    title: 'Parent Mobile App',
+    desc: 'Allow parents to track attendance, fees, exam results, and announcements anytime through a dedicated mobile app.',
     icon: Smartphone,
     image: parentaccessImg,
-    accent: '#059669'
+    accent: '#059669',
+    bullets: ['Real-Time Parent Communication', 'Works on Any Device', 'Premium Support Included']
   },
   {
     id: 3,
     title: 'Automated Fee Reminders',
-    desc: 'Schedule SMS, email, and WhatsApp reminders. Cut overdue collections in half — without lifting a finger.',
+    desc: 'Send SMS, Email, and WhatsApp reminders automatically to improve fee collections and reduce overdue payments.',
     icon: BellRing,
     image: feeremindersImg,
-    accent: '#EA580C'
+    accent: '#EA580C',
+    bullets: ['Improve Fee Collection Efficiency', 'Automated Multi-Channel Notifications', 'Premium Support Included']
   },
   {
     id: 4,
     title: 'WhatsApp Integration',
-    desc: 'Send instant updates, fee receipts, and announcements directly via WhatsApp Business API.',
+    desc: 'Share fee receipts, announcements, and important updates instantly through WhatsApp Business integration.',
     icon: MessageSquare,
     image: whatsappintegrationImg,
-    accent: '#9333EA'
+    accent: '#9333EA',
+    bullets: ['Instant Communication Delivery', 'Higher Parent Engagement', 'Premium Support Included']
   },
   {
     id: 5,
-    title: 'Role-Based Access',
-    desc: 'Fine-grained permissions for Admin, Principal, Faculty, Accountant — everyone sees only what they need.',
+    title: 'Role-Based Access Control',
+    desc: 'Provide secure access permissions for administrators, faculty, accountants, and staff members.',
     icon: ShieldCheck,
     image: rolebasedaccessImg,
-    accent: '#E11D48'
+    accent: '#E11D48',
+    bullets: ['Secure Data Management', 'Department-Wise Access Control', 'Premium Support Included']
   },
   {
     id: 6,
     title: 'Multi-Branch Management',
-    desc: 'Operate every campus from one dashboard. Centralized data, decentralized control.',
+    desc: 'Manage multiple campuses and branches from one centralized dashboard with real-time insights.',
     icon: Building2,
     image: multibranchmanagementImg,
-    accent: '#D97706'
+    accent: '#D97706',
+    bullets: ['Centralized Branch Management', 'Real-Time Reporting & Insights', 'Premium Support Included']
   }
-];
-
-const STANDARD_BULLETS = [
-  'Setup in minutes',
-  'Works on any device',
-  'Premium support included'
 ];
 
 // --- ANIMATION CHOREOGRAPHY ---
@@ -153,7 +153,7 @@ const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
         variants={bulletListVariants}
         className="flex flex-col gap-3 m-0 p-0 list-none"
       >
-        {STANDARD_BULLETS.map((bullet, bIdx) => (
+        {feature.bullets.map((bullet, bIdx) => (
           <motion.li
             key={bIdx}
             variants={bulletItemVariants}
