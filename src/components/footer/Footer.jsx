@@ -64,9 +64,12 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">Ready to Digitize Your Institute?</h2>
-          <p className="text-lg text-white/85 max-w-[600px] mx-auto mb-10 font-medium">Experience a smarter way to manage admissions, academics, communication, and administration with Xplore 360.</p>
-          <motion.button onClick={() => setIsDemoOpen(true)} className="px-8 py-4 rounded-full bg-white text-[#635BFF] font-bold shadow-lg hover:scale-105 transition-transform">Book Free Demo</motion.button>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">Ready to Digitize Your Institution?</h2>
+          <p className="text-lg text-white/85 max-w-[600px] mx-auto mb-10 font-medium">Transform the way your institution operates with Xplore 360, a comprehensive platform designed to simplify admissions, student management, attendance tracking, fee collection, communication, and reporting.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <motion.button onClick={() => setIsDemoOpen(true)} className="px-8 py-4 rounded-full bg-white text-[#635BFF] font-bold shadow-lg hover:scale-105 transition-transform">Book Free Demo</motion.button>
+            <motion.a href={`tel:${contactInfo.phone}`} className="px-8 py-4 rounded-full bg-transparent border-2 border-white text-white font-bold hover:scale-105 hover:bg-white/10 transition-transform inline-block">Talk to an Expert</motion.a>
+          </div>
         </motion.div>
       </section>
 

@@ -11,12 +11,7 @@ const faqs = [
   {
     question: 'Can we manage admissions digitally?',
     answer:
-      'Yes. Our cloud-based software helps institutions manage enquiries, applications, document verification, approvals, and admissions through one centralized platform.',
-  },
-  {
-    question: 'Does the platform support online fee collection?',
-    answer:
-      'Yes. Xplore 360 enables secure online payments, automated reminders, receipt generation, and real-time fee tracking through an integrated CRM and ERP system.',
+      'Yes. Our cloud-based software helps institutions manage enquiries, admissions, batches, attendance and transactions through one centralized platform.',
   },
   {
     question: 'Can attendance be tracked digitally?',
@@ -26,17 +21,17 @@ const faqs = [
   {
     question: "Is our institution's data secure?",
     answer:
-      'Yes. As one of the best CRM software solutions in India for educational institutions, Xplore 360 provides role-based access controls, secure cloud infrastructure, and regular data backups to ensure complete data protection.',
+      'Yes, Xplore 360 provides role-based access controls, secure cloud infrastructure, and regular data backups to ensure complete data protection.',
   },
   {
     question: 'Why choose Xplore 360 over other CRM softwares?',
     answer:
-      'Xplore 360 combines admissions, student management, fee collection, attendance, communication, and analytics into one unified platform, making it one of the best CRM software solutions for educational institutions.',
+      "With more than 12 years of practical experience working closely with educational institutions, we developed Xplore 360 to eliminate operational bottlenecks and solve the most common challenges in admissions, student management, attendance, fee collection, and reporting, making it one of the best CRM software solutions for educational institutions.",
   },
   {
-    question: 'Can Xplore 360 be customized for our institution\'s needs?',
+    question: "Can Xplore 360 be customized for our institution's needs?",
     answer:
-      'Yes. Our CRM software development team can customize workflows, modules, permissions, and reports based on your institution\'s specific requirements.',
+      "Yes. Our CRM software development team can customize workflows, modules, permissions, and reports based on your institution's specific requirements.",
   },
 ];
 

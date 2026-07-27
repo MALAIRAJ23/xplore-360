@@ -4,17 +4,17 @@ import { Sparkles, X, Check, ArrowRight } from 'lucide-react';
 import DemoDialog from '../demo/DemoDialog';
 
 const OLD_WAY = [
-  'Messy Manual Registers',
+  'Messy Manual Student Registration',
   'Fee Tracking & follow-up issues',
   'Delayed, Inaccurate Reports',
-  'Slow Paper-Based Admissions',
+  'Slow Paper-Based Admission process',
 ];
 
 const MODERN_WAY = [
-  '100% Digital Records',
-  'Automated Reminders & Collection',
-  'Real-Time Live Analytics',
-  'Instant Online Admission',
+  '100% Digital Student & Staff Records',
+  'Reminders for follow ups & Fee Collection',
+  'Real-Time Live Dashboards & Analytics',
+  'Reduced Manual Paperwork & Administrative Effort',
 ];
 
 // --- LUXURY ANIMATION VARIANTS ---

@@ -19,15 +19,15 @@ import {
 
 const WORKFLOW_STEPS = [
   { 
-    id: 1, num: '01', title: 'Enquiry', desc: 'Capture leads and start conversations.', icon: MessageSquareText,
+    id: 1, num: '01', title: 'Lead Enquiry', desc: 'Capture and manage all student enquiries through the CRM.', icon: MessageSquareText,
     side: 'left', tilt: -6, mockupIcon: BellRing, mockupTitle: 'New Lead', mockupColor: '#fef3c7', mockupIconColor: '#d97706'
   },
   { 
-    id: 2, num: '02', title: 'Follow-Up', desc: 'Custom CRM automation.', icon: PhoneCall,
+    id: 2, num: '02', title: 'Follow-Up Leads', desc: 'Automatic reminders to ensure timely follow-up of leads.', icon: PhoneCall,
     side: 'right', tilt: 4, mockupIcon: BarChart3, mockupTitle: 'Call Logged', mockupColor: '#e0e7ff', mockupIconColor: '#4f46e5'
   },
   { 
-    id: 3, num: '03', title: 'Admission', desc: 'Simplify admissions with smart workflows.', icon: FileCheck2,
+    id: 3, num: '03', title: 'Admission Approval', desc: 'Automate admission approvals with structured CRM workflows.', icon: FileCheck2,
     side: 'right', tilt: -5, mockupIcon: FileSignature, mockupTitle: 'Form Approved', mockupColor: '#dcfce7', mockupIconColor: '#16a34a'
   },
   { 
@@ -35,19 +35,19 @@ const WORKFLOW_STEPS = [
     side: 'left', tilt: 5, mockupIcon: UserCheck, mockupTitle: 'ID Generated', mockupColor: '#f3e8ff', mockupIconColor: '#9333ea'
   },
   { 
-    id: 5, num: '05', title: 'Fee Collection', desc: 'Collect fees securely and on time.', icon: Wallet,
+    id: 5, num: '05', title: 'Fee Collection', desc: 'Ensure timely fee collection with a centralized payment management system.', icon: Wallet,
     side: 'left', tilt: -6, mockupIcon: CreditCard, mockupTitle: 'Payment Success', mockupColor: '#dbeafe', mockupIconColor: '#2563eb'
   },
   { 
-    id: 6, num: '06', title: 'Attendance', desc: 'Real-time attendance tracking.', icon: CalendarCheck,
+    id: 6, num: '06', title: 'Attendance Tracking', desc: 'Improve student accountability with real-time attendance tracking and insights.', icon: CalendarCheck,
     side: 'right', tilt: -4, mockupIcon: CheckCircle2, mockupTitle: 'Present Today', mockupColor: '#ecfccb', mockupIconColor: '#65a30d'
   },
   { 
-    id: 7, num: '07', title: 'Communication', desc: 'Reach students and staff instantly.', icon: MessageCircle,
+    id: 7, num: '07', title: 'Seamless Communication', desc: 'Communicate with students and staff instantly.', icon: MessageCircle,
     side: 'right', tilt: 4, mockupIcon: MessageCircle, mockupTitle: 'Message Sent', mockupColor: '#e0f2fe', mockupIconColor: '#0284c7'
   },
   { 
-    id: 8, num: '08', title: 'Reports', desc: 'Real-time attendance tracking.', icon: BarChart3,
+    id: 8, num: '08', title: 'Reports & Analytics', desc: 'Make data-driven decisions with detailed reports and analytics.', icon: BarChart3,
     side: 'left', tilt: -5, mockupIcon: BarChart3, mockupTitle: 'Report Ready', mockupColor: '#f3e8ff', mockupIconColor: '#9333ea'
   }
 ];

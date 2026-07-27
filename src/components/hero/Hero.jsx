@@ -51,7 +51,7 @@ const DEVICE_IMAGES = [
 const STATS_DATA = [
   { end: 100, suffix: '+', label: 'Institutes Trust Us' },
   { end: 50000, suffix: '+', label: 'Students Managed' },
-  { end: 10, suffix: '+ Yrs', label: 'Years Industry Experience' },
+  { end: 12, suffix: '+ Yrs', label: 'Years of Industry Experience' },
 ];
 
 // Animation variants for staggered text reveal

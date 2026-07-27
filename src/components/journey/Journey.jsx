@@ -12,80 +12,85 @@ import {
 const STEPS = [
   {
     id: 1,
-    title: 'Lead Enquiry',
-    desc: 'Capture student enquiries through a cloud-based CRM platform.',
+    title: 'Lead Enquiry Management',
+    desc: 'Capture, organize, and track student enquiries efficiently through a cloud-based CRM, ensuring every lead is followed up and converted effectively.',
     tag: 'Lead Capture',
     icon: Sparkles,
     color: '#f59e0b', 
     bg: '#fef3c7',
     details: [
       'Auto-capture leads from websites, campaigns, WhatsApp, and referral sources.',
-      'Intelligent lead assignment and enquiry tracking through custom CRM workflows.'
+      'Lead Status & Follow-Ups Tracking through custom CRM workflows.',
+      'Centralized tracking of Leads from different sources.'
     ]
   },
   {
     id: 2,
-    title: 'CRM Follow-Up',
-    desc: 'Automated counsellor tasks & pre-built WhatsApp templates.',
+    title: 'Lead follow-up',
+    desc: 'Automated follow up reminders & pre-built Email templates for enrollment messages.',
     tag: 'ZERO LEAKAGE',
     icon: MessageCircle,
     color: '#3b82f6', 
     bg: '#dbeafe',
     details: [
-      'Pre-built WhatsApp and email nurturing sequences for admissions.',
-      'Automated reminders to eliminate missed follow-ups and improve conversions.'
+      'Automated reminders to eliminate missed follow-ups and improve conversions.',
+      'Professionally designed email templates that automate communication at every stage of the enrollment journey.'
     ]
   },
   {
     id: 3,
-    title: 'Admission Approval',
-    desc: '100% digital application workflows with one-click approvals.',
+    title: 'Academic Management',
+    desc: 'Manage courses, batch schedules, and fee structures from a centralized platform, ensuring seamless administration and accurate student enrollment.',
     tag: 'PAPERLESS',
     icon: GraduationCap,
     color: '#10b981', 
     bg: '#d1fae5',
     details: [
-      'Secure document verification and approval automation.',
-      'One-click admission processing with centralized student records.'
+      'Configure Multiple Batches & Timetables',
+      'Define Course Duration & Curriculum Details',
+      'Course & Batch Performance Reports'
     ]
   },
   {
     id: 4,
-    title: 'Fee Collection',
-    desc: 'Seamless online payments, auto receipts, and EMI setups.',
-    tag: 'AUTO-RECONCILED',
-    icon: Wallet,
-    color: '#8b5cf6', 
-    bg: '#ede9fe',
-    details: [
-      'Online payment gateway integrations with instant receipt generation.',
-      ' Automated reminders and real-time fee reconciliation.'
-    ]
-  },
-  {
-    id: 5,
     title: 'Attendance Tracking',
-    desc: 'Biometric sync + parent SMS alerts in real-time.',
+    desc: 'Monitor student attendance with precision through biometric integration, digital tracking, and real-time notifications',
     tag: 'LIVE',
     icon: CalendarCheck,
     color: '#ec4899', 
     bg: '#fce7f3',
     details: [
-      'Biometric and digital attendance synchronization.',
+      'Track Student Status: Present, Late, Absent, or Approved Leave',
+      'Batch-Wise and Course-Wise Attendance Monitoring',
       'Instant parent notifications and attendance reporting.'
+    ]
+  },
+  {
+    id: 5,
+    title: 'Transactions Tracking',
+    desc: 'Gain complete financial visibility with a centralized dashboard to track income, expenses, fee collections, and outstanding dues in real time.',
+    tag: 'AUTO-RECONCILED',
+    icon: Wallet,
+    color: '#8b5cf6', 
+    bg: '#ede9fe',
+    details: [
+      'Financial Overview Dashboard',
+      'Income & Expense Tracking',
+      'Partial Payment & Balance Tracking'
     ]
   },
   {
     id: 6,
     title: 'Reports & Analytics',
-    desc: 'Live intuitive dashboards for every single Institutions.',
+    desc: 'Live, intuitive dashboards that provide complete visibility into admissions, academics, attendance, finances, and operational performance.',
     tag: 'INSIGHTS',
     icon: BarChart3,
     color: '#06b6d4', 
     bg: '#cffafe',
     details: [
-      'Real-time dashboards for admissions, fees, and institutional performance.',
-      'Automated reports for management and decision-making.'
+      'Real-Time Dashboards for Admissions, Enrollments & Lead Conversion',
+      'Fee Collection, Pending Dues & Revenue Analytics',
+      'Customizable Reports for Management & Administrators'
     ]
   },
 ];
