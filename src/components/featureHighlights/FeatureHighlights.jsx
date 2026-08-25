@@ -193,7 +193,7 @@ export default function FeatureHighlights() {
   return (
     <section 
       id="features" /* <==== ADDED ID HERE to link with your Navbar! */
-className="relative w-full bg-page-bg py-8 md:py-16"    >
+className="relative w-full bg-page-bg py-4 md:py-10"    >
       
       {/* --- HEADER --- */}
       <div className="w-full flex flex-col items-center text-center px-6 mb-6 md:mb-10 z-10 relative">

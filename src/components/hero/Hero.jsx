@@ -106,7 +106,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-28 pb-10 overflow-hidden min-h-[90vh] flex items-center">
 
       {/* Dynamic Keyframes for Left-to-Right Scrolling */}
       <style dangerouslySetInnerHTML={{__html: `

@@ -22,7 +22,7 @@ export default function DemoVideo() {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full py-20 md:py-32 bg-[#FAFBFF] overflow-hidden flex justify-center">
+    <section ref={sectionRef} className="relative w-full py-10 md:py-16 bg-page-bg overflow-hidden flex justify-center">
       
       {/* Ambient Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#635BFF] opacity-[0.03] rounded-full blur-[100px] pointer-events-none z-0" />

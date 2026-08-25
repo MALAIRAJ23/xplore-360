@@ -76,7 +76,7 @@ export default function Pricing() {
 
   return (
     // FIX: Reduced overall section padding to fit inside 800px height screens
-    <section id="pricing" ref={sectionRef} className="relative w-full py-16 lg:py-20 bg-[#FAFBFF] overflow-hidden">
+    <section id="pricing" ref={sectionRef} className="relative w-full py-10 lg:py-14 bg-page-bg overflow-hidden">
       
       {/* Ambient Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#635BFF] opacity-[0.03] rounded-full blur-[100px] pointer-events-none" />

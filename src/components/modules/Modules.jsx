@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import {
   motion,
   useScroll,
+  useSpring,
   useTransform,
   useInView,
   useMotionValue,
@@ -163,7 +164,7 @@ const StackedCard = ({ mod, index, progress, total }) => {
   return (
     <div 
       className="sticky flex items-start sm:items-center justify-center w-full"
-      style={{ top: `calc(8vh + ${index * 8}px)` }} 
+style={{ top: `calc(100px + ${index * 8}px)` }}
     >
       <motion.div 
         ref={cardRef}
@@ -188,7 +189,7 @@ const StackedCard = ({ mod, index, progress, total }) => {
         <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 relative z-10">
           
           <motion.div 
-            className="flex-1 flex flex-col relative w-full order-2 md:order-1 mt-0"
+            className="flex-1 flex flex-col relative w-full order-2 md:order-1 mt-0 md:pr-6"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -219,7 +220,7 @@ const StackedCard = ({ mod, index, progress, total }) => {
 
           </motion.div>
 
-          <div className="flex-1 w-full flex justify-center items-center order-1 md:order-2">
+          <div className="w-full md:w-[42%] flex justify-center items-center order-1 md:order-2 shrink-0">
             <motion.div 
               initial={{ opacity: 0, x: 20, scale: 0.95 }}
               animate={
@@ -233,7 +234,7 @@ const StackedCard = ({ mod, index, progress, total }) => {
                 scale: { duration: 0.6, ease: "easeOut" },
                 y: isDesktop ? { repeat: Infinity, duration: 5, ease: "easeInOut" } : { duration: 0.4 }
               }}
-              className="w-full max-w-[250px] sm:max-w-[360px] md:max-w-[480px] relative"
+              className="w-full max-w-[200px] sm:max-w-[280px] md:max-w-[360px] relative"
             >
               {/* FIX 1: pt-2.5 (was pt-2) — gives the mobile bezel enough breathing room so the screen doesn't look "clipped" right at the top edge */}
               <div className="bg-[#1e1e1e] rounded-t-xl md:rounded-t-3xl pb-2 md:pb-3 pt-2.5 md:pt-3 px-2 md:px-3 shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_10px_20px_rgba(0,0,0,0.2)] md:shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.3)] relative transition-transform duration-500 group-hover:scale-[1.02]">
@@ -272,9 +273,14 @@ export default function Modules() {
     target: containerRef,
     offset: ['start start', 'end end'],
   });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 60,
+    damping: 20,
+    restDelta: 0.001
+  });
 
   return (
-    <section id="modules" className="relative w-full bg-page-bg py-10 md:py-16">        
+    <section id="modules" className="relative w-full bg-page-bg py-6 md:py-10">        
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -300,13 +306,13 @@ export default function Modules() {
         ref={containerRef} 
         className="relative w-full max-w-[1200px] mx-auto px-5 sm:px-8"
       >
-        <div className="flex flex-col gap-[8vh] sm:gap-[12vh] md:gap-[18vh] pb-6">
+        <div className="flex flex-col gap-[6vh] sm:gap-[10vh] md:gap-[14vh] pb-6">
           {modules.map((mod, index) => (
             <StackedCard 
               key={mod.key} 
               mod={mod} 
               index={index} 
-              progress={scrollYProgress} 
+              progress={smoothProgress} 
               total={modules.length} 
             />
           ))}

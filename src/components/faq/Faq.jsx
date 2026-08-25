@@ -61,7 +61,7 @@ const FAQ = () => {
     <section 
       id="faq" 
       ref={sectionRef} 
-className="w-full py-10 md:py-16 bg-page-bg relative overflow-hidden flex justify-center"    >
+className="w-full py-6 md:py-10 bg-page-bg relative overflow-hidden flex justify-center"    >
       {/* Background Dotted Radial Grid Pattern - Kept very faint to blend perfectly */}
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[size:24px_24px] opacity-40 z-0 pointer-events-none" />
       

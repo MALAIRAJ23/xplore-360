@@ -80,7 +80,7 @@ const ImplementationProcess = () => {
   return (
     <section
       ref={sectionRef}
-className="relative w-full px-5 py-20 md:py-32 bg-page-bg flex flex-col items-center overflow-hidden [perspective:1600px]"    >
+className="relative w-full px-5 py-10 md:py-16 bg-page-bg flex flex-col items-center overflow-hidden [perspective:1600px]"    >
 
       {/* 3D Animations */}
       <style dangerouslySetInnerHTML={{__html: `
@@ -266,7 +266,7 @@ className="relative w-full px-5 py-20 md:py-32 bg-page-bg flex flex-col items-ce
           return (
             <motion.div
               key={n.day}
-              className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 sm:gap-3 cursor-pointer z-20 whitespace-nowrap group bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-[0_8px_24px_-8px_rgba(15,23,42,0.12)] py-1.5 px-3 pl-1.5 sm:py-2 sm:px-4 sm:pl-2 rounded-full [transform-style:preserve-3d]"
+              className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 sm:gap-4 cursor-pointer z-20 whitespace-nowrap group bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-[0_8px_24px_-8px_rgba(15,23,42,0.12)] py-3 px-5 pl-3 sm:py-4 sm:px-6 sm:pl-4 rounded-full [transform-style:preserve-3d]"
               style={{ top: n.pos.top, left: n.pos.left, transform: 'translateZ(25px)' }}
 
               initial={{ opacity: 0, scale: 0.4, rotateX: -60, z: -40 }}
@@ -276,16 +276,16 @@ className="relative w-full px-5 py-20 md:py-32 bg-page-bg flex flex-col items-ce
               whileHover={{ scale: 1.07, y: -6, boxShadow: '0 16px 32px -10px rgba(99,91,255,0.3)' }}
             >
               {/* Icon Circle */}
-              <div className="shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center transition-colors group-hover:bg-[#635BFF] group-hover:text-white">
-                <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={2.5} />
+              <div className="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center transition-colors group-hover:bg-[#635BFF] group-hover:text-white">
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2.5} />
               </div>
 
               {/* Text Info */}
               <div className="flex flex-col items-start gap-0 sm:gap-0.5 pr-1 sm:pr-2">
-                <span className="text-[8px] sm:text-[10px] font-extrabold tracking-widest text-[#635BFF] uppercase">
+                <span className="text-[11px] sm:text-[13px] font-extrabold tracking-widest text-[#635BFF] uppercase">
                   {n.day}
                 </span>
-                <span className="text-[11px] sm:text-[14px] font-bold text-slate-900 leading-tight">
+                <span className="text-[14px] sm:text-[17px] font-bold text-slate-900 leading-tight">
                   {n.title}
                 </span>
               </div>

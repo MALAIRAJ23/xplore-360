@@ -143,7 +143,7 @@ export default function Journey() {
 
   return (
     // FIX: Significantly reduced top and bottom padding (py-12 md:py-16 lg:py-20)
-<section ref={sectionRef} className="py-12 md:py-16 lg:py-20 bg-page-bg overflow-hidden relative w-full flex items-center">
+<section ref={sectionRef} className="py-8 md:py-10 lg:py-12 bg-page-bg overflow-hidden relative w-full flex items-center">
         <div className="max-w-[1200px] mx-auto px-6 w-full">
         
         {/* SECTION HEADER */}

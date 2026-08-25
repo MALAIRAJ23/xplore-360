@@ -44,7 +44,7 @@ export default function Transformation() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
-<section ref={sectionRef} className="relative py-10 md:py-16 overflow-hidden bg-page-bg">
+<section ref={sectionRef} className="relative py-6 md:py-10 overflow-hidden bg-page-bg">
 
      
       <div className="relative w-full max-w-[1100px] mx-auto px-5 sm:px-8 z-10">

@@ -136,7 +136,7 @@ const ProblemCard = ({ card }) => {
           <div className="w-8 h-8 bg-[#635BFF]/10 rounded-lg flex items-center justify-center shrink-0">
             <card.SmallIcon className="text-[#635BFF] w-4 h-4" strokeWidth={2.5} />
           </div>
-          <h3 className="font-display font-extrabold text-[14px] md:text-[16px] text-slate-800 tracking-wide uppercase truncate">
+          <h3 className="font-extrabold text-[14px] md:text-[16px] text-slate-800 tracking-wide uppercase truncate">
             {card.title}
           </h3>
         </motion.div>
@@ -178,7 +178,7 @@ const ProblemCard = ({ card }) => {
 const Problems = () => {
   return (
     // FIX: Changed pb-32 to pb-12 md:pb-16
-    <section className="relative w-full pt-8 pb-12 md:pb-16 overflow-hidden flex flex-col items-center justify-center bg-page-bg perspective-[1000px]">
+    <section className="relative w-full pt-4 pb-6 md:pb-8 overflow-hidden flex flex-col items-center justify-center bg-page-bg perspective-[1000px]">
         
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes scroll-left {

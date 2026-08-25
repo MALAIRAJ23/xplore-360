@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MapPin, Mail } from 'lucide-react';
-import logo from '../../assets/logo.png';
 import DemoDialog from '../demo/DemoDialog';
 
 const footerColumns = [
@@ -34,16 +33,26 @@ const footerColumns = [
       { label: 'Legal', href: '/legal' },
     ],
   },
+  {
+    title: 'Industries',
+    links: [
+      { label: 'Schools', href: '#' },
+      { label: 'Colleges', href: '#' },
+      { label: 'Coaching Centers', href: '#' },
+      { label: 'Training Institutes', href: '#' },
+      { label: 'Tuition Centers', href: '#' },
+      { label: 'Universities', href: '#' },
+    ],
+  },
 ];
 
 const contactInfo = {
   title: 'CONTACT US',
   addresses: [
     '12/46, 9th St, Siddhapudur, Tatabad, Coimbatore, Tamil Nadu 641012',
-    'Musalla Tower, Musalla Area, Al Zahra Street, Sharjah, United Arab Emirates-61164.',
   ],
   phone: '+91 90257 84560',
-  email: 'rubin.ebenezer@xploreintellects.com',
+  email: 'info@xploreintellects.com',
 };
 
 const itemVariants = {
@@ -55,38 +64,31 @@ const Footer = () => {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
-    <div className="w-full bg-[#FAFBFF] overflow-hidden">
+    <div className="w-full bg-page-bg overflow-hidden">
       {/* 1. CTA BANNER */}
-      <section className="w-full px-5 sm:px-8 pt-16 pb-12 flex justify-center">
+      <section className="w-full px-5 sm:px-8 pt-12 pb-8 flex justify-center">
         <motion.div
-          className="relative w-full max-w-[1200px] py-16 px-10 rounded-[3rem] bg-gradient-to-br from-[#7c3aed] to-[#635BFF] text-center overflow-hidden shadow-xl"
+          className="relative w-full max-w-[1100px] py-12 px-8 md:py-14 md:px-10 rounded-[2.5rem] bg-gradient-to-br from-[#7c3aed] to-[#635BFF] text-center overflow-hidden shadow-xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">Ready to Digitize Your Institution?</h2>
-          <p className="text-lg text-white/85 max-w-[600px] mx-auto mb-10 font-medium">Transform the way your institution operates with Xplore 360, a comprehensive platform designed to simplify admissions, student management, attendance tracking, fee collection, communication, and reporting.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">Ready to Digitize Your Institution?</h2>
+          <p className="text-[15px] md:text-[17px] text-white/90 max-w-[650px] mx-auto mb-8 font-medium leading-relaxed">
+            Transform the way your institution operates with Xplore 360, a comprehensive platform designed to simplify admissions, student management, attendance tracking, fee collection, communication, and reporting.
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.button onClick={() => setIsDemoOpen(true)} className="px-8 py-4 rounded-full bg-white text-[#635BFF] font-bold shadow-lg hover:scale-105 transition-transform">Book Free Demo</motion.button>
-            <motion.a href={`tel:${contactInfo.phone}`} className="px-8 py-4 rounded-full bg-transparent border-2 border-white text-white font-bold hover:scale-105 hover:bg-white/10 transition-transform inline-block">Talk to an Expert</motion.a>
+            <motion.button onClick={() => setIsDemoOpen(true)} className="px-8 py-3.5 rounded-full bg-white text-[#635BFF] font-bold text-sm shadow-lg hover:scale-105 transition-transform">Book Free Demo</motion.button>
+            <motion.a href={`tel:${contactInfo.phone}`} className="px-8 py-3.5 rounded-full bg-transparent border-2 border-white/80 hover:border-white text-white font-bold text-sm hover:scale-105 hover:bg-white/10 transition-transform inline-block">Talk to an Expert</motion.a>
           </div>
         </motion.div>
       </section>
 
       {/* 2. MAIN FOOTER */}
       <footer className="w-full pt-12 pb-8 px-6 lg:px-12">
-        <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-[1.5fr_3fr] gap-12 lg:gap-8">
-          
-          {/* Brand Column */}
-          <div className="flex flex-col gap-6">
-            <img src={logo} alt="Xplore 360" className="h-10 w-auto object-contain self-start" />
-            <p className="text-[15px] text-slate-600 leading-relaxed max-w-[350px]">
-              Xplore 360 is a complete institute management platform that simplifies admissions, academics, finance, communication, and administration for modern educational institutions.
-            </p>
-          </div>
-
+        <div className="max-w-[1300px] mx-auto grid grid-cols-1 gap-12 lg:gap-8">
           {/* Links Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 w-full">
             {footerColumns.map((col) => (
               <div key={col.title} className="flex flex-col">
                 <h4 className="text-[13px] font-extrabold text-slate-900 mb-5 tracking-widest uppercase">{col.title}</h4>

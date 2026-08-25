@@ -9,7 +9,7 @@ export default function Logo() {
       <img 
         src={logoImg} 
         alt="XPLORE-360 Logo" 
-        className="h-[49px] w-auto object-contain block" 
+        className="h-[72px] w-auto object-contain block" 
       />
       
       {/* Logo Text */}

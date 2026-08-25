@@ -148,7 +148,7 @@ export default function Workflow() {
 
   return (
     // FIX: Reduced bottom padding (pb-20 md:pb-32 -> pb-12 md:pb-16)
-    <section id="workflow" ref={sectionRef} className="relative w-full pt-10 sm:pt-12 md:pt-16 pb-12 md:pb-16 bg-page-bg overflow-hidden [perspective:1200px]">
+    <section id="workflow" ref={sectionRef} className="relative w-full pt-6 sm:pt-8 md:pt-10 pb-6 md:pb-8 bg-page-bg overflow-hidden [perspective:1200px]">
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6">
         
         <div className="relative z-20 max-w-[640px] text-center mx-auto mb-6 sm:mb-8 lg:mb-12">

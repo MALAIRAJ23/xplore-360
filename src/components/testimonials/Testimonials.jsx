@@ -99,7 +99,7 @@ export default function Testimonials() {
 
   return (
     // FIX: Optimized padding to fit nicely on standard laptop monitors (py-16 to py-24)
-<section id="reviews" ref={sectionRef} className="relative w-full py-8 lg:py-12 overflow-hidden bg-page-bg">      
+<section id="reviews" ref={sectionRef} className="relative w-full py-4 lg:py-8 overflow-hidden bg-page-bg">      
       
       <div className="relative w-full max-w-[1250px] mx-auto px-5 sm:px-8 z-10">
         

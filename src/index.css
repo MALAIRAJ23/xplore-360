@@ -28,8 +28,8 @@
   --color-error: #ef4444;
 
   /* ===== FONTS ===== */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Sora', 'Inter', sans-serif;
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* ===== RADIUS ===== */
   --radius-sm: 6px;

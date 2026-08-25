@@ -126,7 +126,7 @@ const ProductTour = () => {
   return (
     <section 
   ref={sectionRef} 
-  className="relative w-full py-6 sm:py-10 lg:py-14 px-4 sm:px-6 bg-page-bg font-sans overflow-hidden flex justify-center"
+  className="relative w-full py-4 sm:py-6 lg:py-10 px-4 sm:px-6 bg-page-bg overflow-hidden flex justify-center"
 >
       {/* BACKGROUND GRADIENT GLOW */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(139,92,246,0.06)_0%,transparent_70%)] pointer-events-none" />

@@ -99,7 +99,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`pointer-events-auto flex items-center justify-between w-full max-w-[1200px] py-2 pl-5 pr-2.5 sm:pr-3 rounded-full transition-all duration-500 ease-out border ${
+        className={`pointer-events-auto flex items-center justify-between w-full max-w-[1200px] py-0 pl-5 pr-2.5 sm:pr-3 rounded-full transition-all duration-500 ease-out border h-[64px] overflow-hidden ${
           scrolled 
             ? 'bg-white/80 backdrop-blur-xl border-slate-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)]' 
             : 'bg-white/40 backdrop-blur-md border-white/40 shadow-sm'
