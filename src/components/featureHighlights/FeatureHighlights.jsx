@@ -87,12 +87,11 @@ const contentVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 18, filter: 'blur(4px)' },
+  hidden: { opacity: 0, y: 15 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: 'blur(0px)',
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] }
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
   }
 };
 
@@ -220,23 +219,21 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={activeIndex}
-                initial={{ opacity: 0, scale: 1.06, clipPath: 'inset(8% 8% 8% 8% round 20px)' }}
+                initial={{ opacity: 0, scale: 1.05 }}
                 animate={{
                   opacity: 1,
                   scale: 1,
-                  clipPath: 'inset(0% 0% 0% 0% round 20px)',
                   transition: {
-                    clipPath: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-                    scale: { type: 'spring', stiffness: 140, damping: 18 },
+                    scale: { type: 'spring', stiffness: 120, damping: 20 },
                     opacity: { duration: 0.4 }
                   }
                 }}
                 exit={{
                   opacity: 0,
-                  scale: 0.96,
-                  transition: { duration: 0.35, ease: [0.4, 0, 1, 1] }
+                  scale: 0.95,
+                  transition: { duration: 0.3 }
                 }}
-                className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-[1.25rem] md:rounded-[2rem]"
+                className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-[1.25rem] md:rounded-[2rem] will-change-transform"
               >
                 <div className="relative rounded-[1.25rem] md:rounded-[2rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(99,91,255,0.25)] w-full h-full">
                   <img 
@@ -249,7 +246,7 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
             </AnimatePresence>
 
             <motion.div 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] opacity-20 blur-[50px] md:blur-[90px] -z-10 rounded-full"
+              className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] opacity-20 blur-[90px] -z-10 rounded-full"
               animate={{ backgroundColor: activeFeature.accent }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             />

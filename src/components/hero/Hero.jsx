@@ -165,9 +165,9 @@ const Hero = () => {
 </motion.div>
 
           {/* Stats Grid */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 w-full pt-8 border-t border-slate-200/60 gap-6">
-            {STATS_DATA.map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center lg:items-start">
+          <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-3 w-full pt-8 border-t border-slate-200/60 gap-6">
+            {STATS_DATA.map((stat, index) => (
+              <div key={stat.label} className={`flex flex-col items-center lg:items-start ${index === 2 ? 'col-span-2 sm:col-span-1' : ''}`}>
                 <h4 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-1">
                   <AnimatedNumber end={stat.end} suffix={stat.suffix} start={mounted} />
                 </h4>

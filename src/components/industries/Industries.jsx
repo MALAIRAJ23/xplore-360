@@ -42,7 +42,7 @@ export default function Industries() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-full lg:w-[340px] shrink-0 lg:sticky lg:top-[100px]"
+            className="w-full lg:w-[340px] shrink-0 lg:sticky lg:top-[100px] flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#635BFF]/10 border border-[#635BFF]/20 rounded-full mb-6">
               <Sparkles size={12} className="text-[#635BFF]" />
