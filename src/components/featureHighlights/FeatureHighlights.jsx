@@ -170,9 +170,9 @@ const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
   return (
     <div 
       ref={ref} 
-      className="relative w-full min-h-[130vh] md:min-h-[140vh]"
+      className="relative w-full min-h-[110vh] md:min-h-[120vh]"
     >
-<div className="sticky top-[42vh] md:top-[8vh] h-[58vh] md:h-[84vh] bg-page-bg px-1 md:px-0 flex flex-col justify-center">        {content}
+<div className="sticky top-[100px] h-[55vh] md:h-[76vh] bg-page-bg px-1 md:px-0 flex flex-col justify-center">        {content}
       </div>
     </div>
   );
@@ -214,8 +214,8 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
         {/* ================================================= */}
         {/* LEFT SIDE: THE STICKY IMAGE (Pinned)              */}
         {/* ================================================= */}
-<div className="w-full md:w-1/2 sticky top-0 md:top-[8vh] h-[42vh] md:h-[84vh] flex items-center justify-center z-20 bg-page-bg md:bg-transparent pt-4 md:pt-0">          
-          <div className="relative w-full max-w-[360px] md:max-w-[600px] lg:max-w-[640px] aspect-[4/3] md:aspect-[5/4.6] flex items-center justify-center">
+<div className="w-full md:w-1/2 sticky top-[100px] h-[50vh] md:h-[80vh] flex items-center justify-center z-20 bg-page-bg md:bg-transparent pt-4 md:pt-0">          
+          <div className="relative w-full max-w-[420px] md:max-w-[500px] lg:max-w-[560px] aspect-square flex items-center justify-center">
             
             <AnimatePresence mode="popLayout">
               <motion.div
@@ -236,13 +236,13 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
                   scale: 0.96,
                   transition: { duration: 0.35, ease: [0.4, 0, 1, 1] }
                 }}
-                className="absolute inset-0 flex items-center justify-center"
+                className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-[1.25rem] md:rounded-[2rem]"
               >
-                <div className="relative rounded-[1.25rem] md:rounded-[2rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(99,91,255,0.25)] w-full h-full aspect-[4/3] md:aspect-auto">
+                <div className="relative rounded-[1.25rem] md:rounded-[2rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(99,91,255,0.25)] w-full h-full">
                   <img 
                     src={activeFeature.image} 
                     alt={activeFeature.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center rounded-[1.25rem] md:rounded-[2rem]"
                   />
                 </div>
               </motion.div>
