@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
+import Lenis from 'lenis';
 
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
@@ -29,6 +30,22 @@ function App() {
   const [hasTriggered30, setHasTriggered30] = useState(false);
   const [hasTriggered50, setHasTriggered50] = useState(false);
   const [hasTriggered75, setHasTriggered75] = useState(false);
+
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   // Track the total scroll progress of the entire webpage (0.0 to 1.0)
   const { scrollYProgress } = useScroll();
