@@ -205,8 +205,10 @@ const Hero = () => {
               >
                 {/* iPhone Frame */}
                 <div className="w-[220px] sm:w-[280px] aspect-[9/19] bg-slate-900 rounded-[30px] sm:rounded-[35px] p-[6px] sm:p-[8px] relative shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] sm:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.4)] border border-slate-800">
-                  {/* Dynamic Island / Notch */}
-                  <div className="absolute top-[10px] sm:top-[12px] left-1/2 -translate-x-1/2 w-[30%] h-[16px] sm:h-[20px] bg-slate-900 rounded-full z-20" />
+                  {/* Punch-Hole Camera (Left Side) */}
+                  <div className="absolute top-[12px] sm:top-[15px] left-[15px] sm:left-[20px] w-3.5 h-3.5 sm:w-4 sm:h-4 bg-slate-950 rounded-full z-20 shadow-sm border border-slate-900 flex items-center justify-center pointer-events-none">
+                    <div className="w-1.5 h-1.5 bg-slate-800 rounded-full" />
+                  </div>
                   
                   {/* Screen Content */}
                   <div className="w-full h-full bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden relative">

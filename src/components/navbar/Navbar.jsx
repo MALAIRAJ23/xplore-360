@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '../shared/Logo';
@@ -110,7 +110,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <ul className={`${isCompact ? 'hidden' : 'flex'} items-center gap-1 list-none m-0 p-0 relative`}>
+        <ul className={`${isCompact ? 'hidden' : 'flex'} items-center gap-1 list-none m-0 p-0 relative font-sans`}>
           {NAV_LINKS.map((link) => (
             <li key={link.id} className="relative z-10">
               <a
@@ -118,8 +118,7 @@ export default function Navbar() {
                 onClick={(e) => handleScrollToSection(e, link.href)}
                 onMouseEnter={() => setHoveredLink(link.id)}
                 onMouseLeave={() => setHoveredLink(null)}
-                // FIX: Changed to text-black and font-extrabold for a strong, punchy look
-                className={`relative px-4 py-2 text-[14px] font-extrabold transition-colors duration-300 block ${
+                className={`relative px-4 py-2 text-[14.5px] font-bold transition-colors duration-300 block ${
                   hoveredLink === link.id ? 'text-[#635BFF]' : 'text-black'
                 }`}
               >
@@ -193,14 +192,13 @@ export default function Navbar() {
               exit="exit"
               className="absolute top-[80px] left-4 right-4 sm:left-6 sm:right-6 bg-white p-5 rounded-[24px] border border-slate-100 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] flex flex-col gap-2 z-50 pointer-events-auto overflow-hidden"
             >
-              <ul className="flex flex-col gap-1 list-none m-0 p-0 mb-4">
+              <ul className="flex flex-col gap-1 list-none m-0 p-0 mb-4 font-sans">
                 {NAV_LINKS.map((link) => (
                   <motion.li key={`mobile-${link.id}`} variants={mobileItemVariants}>
                     <a
                       href={link.href}
                       onClick={(e) => handleScrollToSection(e, link.href)}
-                      // FIX: Changed mobile links to text-black and font-extrabold
-                      className="block w-full text-[15px] font-extrabold text-black px-4 py-3.5 rounded-xl hover:bg-[#635BFF]/10 hover:text-[#635BFF] transition-colors"
+                      className="block w-full text-[15px] font-bold text-black px-4 py-3.5 rounded-xl hover:bg-[#635BFF]/10 hover:text-[#635BFF] transition-colors"
                     >
                       {link.label}
                     </a>
