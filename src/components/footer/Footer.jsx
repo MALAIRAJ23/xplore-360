@@ -88,7 +88,7 @@ const Footer = () => {
       <footer className="w-full pt-12 pb-8 px-6 lg:px-12">
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 gap-12 lg:gap-8">
           {/* Links Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-8 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-8 w-full">
             {footerColumns.map((col) => (
               <div key={col.title} className="flex flex-col">
                 <h4 className="text-[13px] font-extrabold text-slate-900 mb-5 tracking-widest uppercase">{col.title}</h4>
@@ -107,7 +107,7 @@ const Footer = () => {
             ))}
 
             {/* Contact Column */}
-            <div className="flex flex-col col-span-2 sm:col-span-2 lg:col-span-1 mt-4 sm:mt-0">
+            <div className="flex flex-col col-span-2 md:col-span-2 mt-4 md:mt-0">
               <h4 className="text-[13px] font-extrabold text-slate-900 mb-5 tracking-widest uppercase">{contactInfo.title}</h4>
               <ul className="space-y-4">
                 {contactInfo.addresses.map((addr, i) => (
