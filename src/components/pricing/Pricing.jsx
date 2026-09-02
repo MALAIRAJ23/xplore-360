@@ -113,8 +113,8 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          // FIX: Reduced bottom margin to bring cards closer
-          className="flex justify-center mb-10 lg:mb-12"
+          // FIX: Reduced bottom margin to bring cards closer (offsetting the pt-6 we added below to prevent badge clipping)
+          className="flex justify-center mb-4 lg:mb-12"
         >
           <div className="relative flex items-center p-1.5 bg-white border border-slate-200 shadow-sm rounded-full">
             
@@ -150,7 +150,7 @@ export default function Pricing() {
         </motion.div>
 
         {/* --- PRICING CARDS GRID --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-center max-w-[1050px] mx-auto">
+        <div className="flex lg:grid lg:grid-cols-3 flex-nowrap overflow-x-auto lg:overflow-visible snap-x snap-mandatory gap-5 lg:gap-6 items-stretch lg:items-center max-w-[1050px] mx-auto pt-6 lg:pt-0 pb-8 lg:pb-0 px-5 sm:px-8 lg:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {PRICING_PLANS.map((plan, index) => {
             const isPopular = plan.popular;
             const Icon = plan.icon;
@@ -166,8 +166,8 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: 0.1 + (index * 0.1), ease: "easeOut" }}
-                // FIX: Added max-w-md on mobile so they don't stretch, tightened padding (p-6 lg:p-8)
-                className={`relative flex flex-col h-full w-full max-w-md mx-auto lg:max-w-none rounded-[2rem] p-6 lg:p-8 transition-all duration-500 ${
+                // FIX: Configured for horizontal scrolling on mobile (fixed width, shrink-0, snap-center)
+                className={`relative flex flex-col h-full w-[85vw] sm:w-[340px] lg:w-full shrink-0 snap-center mx-auto rounded-[2rem] p-6 lg:p-8 transition-all duration-500 ${
                   isPopular 
                     ? 'bg-gradient-to-br from-[#7c3aed] via-[#6d28d9] to-[#635BFF] text-white shadow-[0_24px_50px_-12px_rgba(99,91,255,0.4)] lg:scale-[1.03] z-10 border-0' 
                     : 'bg-white text-slate-900 border border-slate-200/80 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1 z-0'

@@ -176,7 +176,7 @@ style={{ top: `calc(100px + ${index * 8}px)` }}
           backfaceVisibility: 'hidden',
           willChange: 'transform'
         }}
-        className="w-full bg-gradient-to-br from-purple-300 via-purple-200 to-indigo-100 rounded-[28px] sm:rounded-[40px] border border-slate-200/80 shadow-lg md:shadow-[0_0_40px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col md:flex-row items-center p-5 sm:p-8 md:p-12 h-auto min-h-min md:h-[65vh] md:min-h-[500px] group relative"
+        className="w-full bg-gradient-to-br from-purple-300 via-purple-200 to-indigo-100 rounded-[28px] sm:rounded-[40px] border border-slate-200/80 shadow-lg md:shadow-[0_0_40px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col md:flex-row items-center p-5 sm:p-8 md:p-12 h-auto min-h-min md:h-[68vh] md:min-h-[520px] group relative"
       >
         
         {isDesktop && (
@@ -220,7 +220,7 @@ style={{ top: `calc(100px + ${index * 8}px)` }}
 
           </motion.div>
 
-          <div className="w-full md:w-[42%] flex justify-center items-center order-1 md:order-2 shrink-0">
+          <div className="w-full md:w-[50%] flex justify-center items-center order-1 md:order-2 shrink-0">
             <motion.div 
               initial={{ opacity: 0, x: 20, scale: 0.95 }}
               animate={
@@ -234,7 +234,7 @@ style={{ top: `calc(100px + ${index * 8}px)` }}
                 scale: { duration: 0.6, ease: "easeOut" },
                 y: isDesktop ? { repeat: Infinity, duration: 5, ease: "easeInOut" } : { duration: 0.4 }
               }}
-              className="w-full max-w-[200px] sm:max-w-[280px] md:max-w-[360px] relative"
+              className="w-full max-w-[240px] sm:max-w-[340px] md:max-w-[480px] lg:max-w-[520px] relative"
             >
               {/* FIX 1: pt-2.5 (was pt-2) — gives the mobile bezel enough breathing room so the screen doesn't look "clipped" right at the top edge */}
               <div className="bg-[#1e1e1e] rounded-t-xl md:rounded-t-3xl pb-2 md:pb-3 pt-2.5 md:pt-3 px-2 md:px-3 shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_10px_20px_rgba(0,0,0,0.2)] md:shadow-[inset_0_2px_4px_rgba(255,255,255,0.1),0_20px_40px_rgba(0,0,0,0.3)] relative transition-transform duration-500 group-hover:scale-[1.02]">

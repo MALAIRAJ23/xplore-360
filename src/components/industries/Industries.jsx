@@ -64,7 +64,7 @@ export default function Industries() {
             </p>
 
             {/* Stat pills */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-fit mx-auto lg:mx-0 text-left">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#635BFF]/10 flex items-center justify-center shrink-0">
                   <span className="text-[13px] font-extrabold text-[#635BFF]">7+</span>

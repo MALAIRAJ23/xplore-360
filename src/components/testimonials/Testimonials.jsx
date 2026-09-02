@@ -9,8 +9,8 @@ const TESTIMONIALS = [
     name: 'Dr. Ramesh Kumar',
     role: 'Principal',
     rating: 5,
-    // image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop',
-    // avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop',
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     id: 2,
@@ -18,18 +18,18 @@ const TESTIMONIALS = [
     name: 'Priya Nair',
     role: 'Academic Coordinator',
     rating: 5,
-    // image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&fit=crop',
-    // avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&fit=crop',
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
-  // {
-  //   id: 3,
-  //   quote: "The seamless integration of fee collection, attendance, and parent communication into one dashboard has saved our faculty hundreds of hours every single month. Pure magic.",
-  //   name: 'David Chen',
-  //   role: 'Principal',
-  //   rating: 5,
-  //   image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop',
-  //   avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-  // }
+  {
+    id: 3,
+    quote: "The seamless integration of fee collection, attendance, and parent communication into one dashboard has saved our faculty hundreds of hours every single month. Pure magic.",
+    name: 'David Chen',
+    role: 'Principal',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop',
+    avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
+  }
 ];
 
 const TRUSTED_CLIENTS = [

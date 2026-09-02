@@ -75,6 +75,20 @@ const FEATURES = [
   }
 ];
 
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(true);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    setIsDesktop(mq.matches);
+    const handler = (e) => setIsDesktop(e.matches);
+    mq.addEventListener ? mq.addEventListener('change', handler) : mq.addListener(handler);
+    return () => {
+      mq.removeEventListener ? mq.removeEventListener('change', handler) : mq.removeListener(handler);
+    };
+  }, []);
+  return isDesktop;
+};
+
 // --- ANIMATION CHOREOGRAPHY ---
 const contentVariants = {
   hidden: {},
@@ -109,22 +123,25 @@ const bulletItemVariants = {
 const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
   const ref = useRef(null);
   const isActive = activeIndex === index;
+  const isDesktop = useIsDesktop();
 
   const isInView = useInView(ref, {
     margin: "-35% 0px -35% 0px"
   });
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && isDesktop) {
       setActiveIndex(index);
     }
-  }, [isInView, index, setActiveIndex]);
+  }, [isInView, index, setActiveIndex, isDesktop]);
 
   const content = (
     <motion.div
       variants={contentVariants}
       initial="hidden"
-      animate={isActive ? "visible" : "hidden"}
+      whileInView={!isDesktop ? "visible" : undefined}
+      animate={isDesktop ? (isActive ? "visible" : "hidden") : undefined}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div
         variants={itemVariants}
@@ -169,9 +186,24 @@ const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
   return (
     <div 
       ref={ref} 
-      className="relative w-full min-h-[110vh] md:min-h-[120vh]"
+      className="relative w-full mb-16 md:mb-0 min-h-0 md:min-h-[120vh]"
     >
-<div className="sticky top-[100px] h-[55vh] md:h-[76vh] bg-page-bg px-1 md:px-0 flex flex-col justify-center">        {content}
+      {!isDesktop && (
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="mb-8 rounded-[1.25rem] overflow-hidden shadow-[0_15px_40px_-15px_rgba(99,91,255,0.2)] bg-white border border-slate-100 p-1.5"
+        >
+          <img 
+            src={feature.image} 
+            alt={feature.title}
+            className="w-full h-auto object-cover rounded-[1rem]"
+          />
+        </motion.div>
+      )}
+      <div className="md:sticky md:top-[100px] md:h-[76vh] bg-page-bg px-1 md:px-0 flex flex-col justify-center">
+        {content}
       </div>
     </div>
   );
@@ -213,7 +245,7 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
         {/* ================================================= */}
         {/* LEFT SIDE: THE STICKY IMAGE (Pinned)              */}
         {/* ================================================= */}
-<div className="w-full md:w-1/2 sticky top-[100px] h-[50vh] md:h-[80vh] flex items-center justify-center z-20 bg-page-bg md:bg-transparent pt-4 md:pt-0">          
+<div className="hidden md:flex w-full md:w-1/2 sticky top-[100px] h-[50vh] md:h-[80vh] items-center justify-center z-20 bg-page-bg md:bg-transparent pt-4 md:pt-0">          
           <div className="relative w-full max-w-[420px] md:max-w-[500px] lg:max-w-[560px] aspect-square flex items-center justify-center">
             
             <AnimatePresence mode="popLayout">
