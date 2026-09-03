@@ -58,7 +58,7 @@ export default function DemoDialog({ isOpen, onClose = () => {} }) {
     setIsSubmitting(true);
 
     // Cleaned up WhatsApp message formatting (No emojis, bullet points, reduced spacing)
-    const message = `*New Demo Request*
+    const message = `*New Demo Request for Xplore 360 *
 • *Name:* ${formData.name}
 • *Email:* ${formData.email}
 • *Phone:* ${formData.phone}
@@ -67,8 +67,7 @@ export default function DemoDialog({ isOpen, onClose = () => {} }) {
 • *Students:* ${formData.studentCount}
 
 Submitted from Xplore 360 Landing Page`;
-
-    const whatsappNumber = "9190257 84560";
+    const whatsappNumber = "919025784560";
 
     // Open WhatsApp in a new tab
     window.open(

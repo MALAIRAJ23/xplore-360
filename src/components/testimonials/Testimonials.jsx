@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Quote, Star, Plus, Sparkles, ArrowRight, ArrowLeft } from 'lucide-react';
 
+import testimonialImg1 from '../../assets/testimonials/testimonials-1.png';
+import testimonialImg2 from '../../assets/testimonials/testimonials-2.png';
+import testimonialImg3 from '../../assets/testimonials/testimonials-3.png';
+
 const TESTIMONIALS = [
   {
     id: 1,
@@ -9,7 +13,7 @@ const TESTIMONIALS = [
     name: 'Dr. Ramesh Kumar',
     role: 'Principal',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&fit=crop',
+    image: testimonialImg1,
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
@@ -18,7 +22,7 @@ const TESTIMONIALS = [
     name: 'Priya Nair',
     role: 'Academic Coordinator',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&fit=crop',
+    image: testimonialImg2,
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
   {
@@ -27,7 +31,7 @@ const TESTIMONIALS = [
     name: 'David Chen',
     role: 'Principal',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop',
+    image: testimonialImg3,
     avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
   }
 ];
@@ -157,25 +161,6 @@ export default function Testimonials() {
               />
             </AnimatePresence>
 
-            {/* Glassmorphic Trusted Clients Pill */}
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 bg-white/70 backdrop-blur-xl border border-white/50 rounded-full pl-4 sm:pl-5 pr-1.5 sm:pr-2 py-1.5 sm:py-2 flex items-center gap-3 sm:gap-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)]">
-              <span className="text-[11px] sm:text-[13px] font-bold text-slate-800 tracking-tight">
-                Trusted Clients
-              </span>
-              <div className="flex items-center -space-x-2 sm:-space-x-3">
-                {TRUSTED_CLIENTS.map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt="Client"
-                    className="w-7 h-7 sm:w-9 sm:h-9 rounded-full border-[2px] border-white object-cover shadow-sm"
-                  />
-                ))}
-                <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full border-[2px] border-white bg-[#635BFF] text-white flex items-center justify-center shadow-md relative z-10">
-                  <Plus size={14} strokeWidth={3} />
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* --- RIGHT: QUOTE TEXT --- */}
@@ -230,19 +215,6 @@ export default function Testimonials() {
                 
                 {/* Author Info */}
                 <div className="flex items-center gap-3.5 sm:gap-4 overflow-hidden">
-                  <AnimatePresence mode="wait">
-                    <motion.img
-                      key={testimonial.id}
-                      variants={contentVariants}
-                      initial="enter"
-                      animate="center"
-                      exit="exit"
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover shadow-sm shrink-0 border border-slate-100"
-                    />
-                  </AnimatePresence>
-                  
                   <div className="flex flex-col min-w-0">
                     <AnimatePresence mode="wait">
                       <motion.span 

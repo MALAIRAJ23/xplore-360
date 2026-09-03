@@ -120,7 +120,7 @@ const bulletItemVariants = {
 };
 
 // --- TEXT BLOCK COMPONENT ---
-const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
+const TextBlock = ({ feature, index, activeIndex, setActiveIndex, isLast }) => {
   const ref = useRef(null);
   const isActive = activeIndex === index;
   const isDesktop = useIsDesktop();
@@ -186,7 +186,7 @@ const TextBlock = ({ feature, index, activeIndex, setActiveIndex }) => {
   return (
     <div 
       ref={ref} 
-      className="relative w-full mb-16 md:mb-0 min-h-0 md:min-h-[120vh]"
+      className={`relative w-full ${isLast ? 'mb-4 md:mb-0' : 'mb-16 md:mb-0'} min-h-0 md:min-h-[120vh]`}
     >
       {!isDesktop && (
         <motion.div 
@@ -297,10 +297,11 @@ className="relative w-full bg-page-bg py-4 md:py-10"    >
               index={index} 
               activeIndex={activeIndex} 
               setActiveIndex={setActiveIndex}
+              isLast={index === FEATURES.length - 1}
             />
           ))}
 
-          <div className="h-[10vh] md:h-[20vh] w-full" />
+          <div className="hidden md:block h-[20vh] w-full" />
 
         </div>
 

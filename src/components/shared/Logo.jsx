@@ -5,11 +5,10 @@ import logoImg from '../../assets/logo.png';
 export default function Logo() {
   return (
     <a href="/" className="flex items-center gap-3 no-underline">
-      {/* Logo Icon Asset */}
       <img 
         src={logoImg} 
         alt="XPLORE-360 Logo" 
-        className="h-[72px] w-auto object-contain block" 
+        className="h-12 w-auto object-contain block" 
       />
       
       {/* Logo Text */}
