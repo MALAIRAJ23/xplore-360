@@ -13,7 +13,7 @@ import Implementation from './components/implementation/Implementation';
 import ProductTour from './components/productTour/ProductTour';
 import FeatureHighlights from './components/featureHighlights/FeatureHighlights';
 import DemoVideo from './components/demoVideo/DemoVideo'; // IMPORT IT HERE
-import Pricing from  './components/pricing/Pricing';
+// import Pricing from  './components/pricing/Pricing';
 import Transformation from './components/transformation/Transformation';
 import Testimonials from './components/testimonials/Testimonials';
 import FAQ from './components/faq/Faq';
@@ -86,7 +86,7 @@ function App() {
         <Implementation />
         <ProductTour />
         <FeatureHighlights />
-        <Pricing />
+        {/* <Pricing /> */}
         <Transformation />
         <Testimonials />
         <FAQ />
